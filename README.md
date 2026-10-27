@@ -1,10 +1,21 @@
 # 서정현 | AI Agent Developer
 
-AI 서비스의 구현과 검증 경험을 쌓고 있습니다. 팀 프로젝트에서는 개인 기여와 검증 범위를 구분해 기록합니다.
+AI 서비스의 구현과 평가·검증을 함께 고민하는 개발자 서정현입니다.
+익숙하지 않은 기술을 배우고, 실제 서비스와 테스트에 적용하며 성장하고 있습니다.
 
 [포트폴리오 보기](https://ai-agent-portfolio-theta.vercel.app/)
 
 ## 대표 프로젝트
+
+| 프로젝트 | 소개 | 주요 기여 | 바로가기 |
+| --- | --- | --- | --- |
+| 말해봄 Mk.2 · 팀 | 한국어 면접 연습·코칭 서비스 | 모델 평가, E2E·회귀 테스트, CI, 사용자 화면 | [공개 소개](https://nanocode00.github.io/malhaebom-showcase/) |
+| 보이스가드 · 팀 | 통화 녹음 기반 보이스피싱 분석 서비스 | 백엔드 API, 음성·분류 연동, 배포·검증 | [팀 저장소](https://github.com/aihuman-7th/proj1-e) |
+| TicketPilot · 개인 | Windows 예매 시작 알림 도우미 | GUI, 예약·알림, 설정 저장, 자동 테스트 | [공개 코드](https://github.com/SJeongHyeon/ticketpilot-public) |
+
+## 프로젝트별 상세 기여
+
+팀 프로젝트에서는 개인 기여와 검증 범위를 구분해 기록합니다.
 
 ### 말해봄 Mk.2 · 팀 프로젝트
 
@@ -44,3 +55,8 @@ Windows에서 예매 시작 시각을 KST 기준으로 관리하는 Python 데�
 ## 관심 분야
 
 Python · FastAPI · AI Agent · 음성 기반 서비스 · 평가 및 테스트 · 서비스 배포
+
+## 다음 프로젝트 · 개발 예정
+
+RAG와 LangGraph를 활용한 AI 서비스 프로젝트를 진행할 예정입니다.
+개발을 시작하면 구현 과정과 검증 결과를 이곳에 기록하겠습니다.
