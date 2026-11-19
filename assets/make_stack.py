@@ -26,6 +26,7 @@ THEMES = {
         "coral": ("#712B13", "#F0997B", "#F5C4B3"),
     },
 }
+SOLID = {"purple": "#534AB7", "teal": "#0F6E56", "coral": "#B24A25"}  # 칩 바탕(라이트·다크 공통), 글자는 흰색
 GROUPS = [
     ("Agent · LLM", "purple", ["LangGraph", "RAG 검색·리랭크", "MCP · n8n", "Whisper · KoELECTRA"]),
     ("Backend · Data", "teal", ["Python", "FastAPI", "PostgreSQL(pgvector)", "Docker"]),
@@ -39,20 +40,21 @@ def build(mode: str) -> str:
     body: list[str] = []
     y = 124
     for name, ramp, items in GROUPS:
-        fill, stroke, text = t[ramp]
+        _, stroke, text = t[ramp]
+        fill = SOLID[ramp]
         body.append(f'<circle cx="{X0 + 7}" cy="{y - 7}" r="7" fill="{stroke}"/>')
         body.append(svgtext.path(name, X0 + 24, y, 21, text if mode == "light" else stroke, bold=True, kr_wght=700))
-        y += 16
+        y += 20
         x = X0
         for it in items:
             w = svgtext.measure(it, FS, bold=True, kr_wght=600) + PAD * 2
             if x + w > XMAX:
                 x = X0
                 y += CH + GAP
-            body.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{CH}" rx="{CH / 2}" fill="{fill}" stroke="{stroke}" stroke-width="1.5"/>')
-            body.append(svgtext.path(it, x + PAD, y + CH / 2 + 7.5, FS, text, bold=True, kr_wght=600))
+            body.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{CH}" rx="{CH / 2}" fill="{fill}"/>')
+            body.append(svgtext.path(it, x + PAD, y + CH / 2 + 7.5, FS, "#FFFFFF", bold=True, kr_wght=600))
             x += w + GAP
-        y += CH + 34
+        y += CH + 48
     H = y - 8
     head = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img">',
