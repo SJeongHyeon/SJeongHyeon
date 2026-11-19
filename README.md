@@ -28,7 +28,7 @@
 | 기여 | 무엇을 어떻게 했나 | 확인할 곳 |
 | :-- | :-- | :-- |
 | **프롬프트 인젝션 방어** (#169) | 질문에 지시문을 숨겨 넣는 공격을 **LLM을 부르지 않는 코드 규칙**으로 막습니다. 전각·제로폭 문자와 비슷하게 생긴 외국 문자를 정규화하고, 문구 단위로 점수를 매겨 **대화 전체의 누적 위험도**를 봅니다(턴마다 0.7배로 줄고, 60 이상이면서 이번 질문에 위험 신호가 있으면 차단하며, 차단된 질문을 표현만 바꿔 다시 보내면 가중). 응답이 나가기 직전에는 키·접속 문자열·시스템 프롬프트 조각이 실려 나가는지 한 번 더 검사합니다. 방어 단위 시험 39건이 공개 사본에서 통과합니다. 공격 차단률 같은 효과 수치는 측정하지 않았습니다. | [`injection_guard.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/injection_guard.py) · [`output_guard.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/output_guard.py) · [`test_injection_guard.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/tests/test_injection_guard.py) · [설계 문서](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/specs/multi-turn-injection-defense.md) |
-| 방어가 만든 부작용 | 작성기 지시문에 인젝션 방어 문장을 더했더니 고정 평가에서 정답 근거 인용이 24건에서 23건으로 줄어(같은 5번 문항, 3회 모두), 그 지시문 문장을 되돌렸습니다. | [`EVAL_REPORT.md` 4-50·4-51](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md) |
+| 방어가 만든 부작용 | 작성기 지시문에 인젝션 방어 문장을 더했더니 고정 평가에서 정답 근거 인용이 24건에서 23건으로 줄어(같은 5번 문항, 3회 모두), 그 지시문 문장을 되돌렸습니다. | [EVAL_REPORT.md 4-50·4-51](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md) |
 | **승인 대기와 재개** (#89) | 사람 승인 단계에서 그래프를 멈추고 `thread_id`로 상태를 저장해, 승인 뒤 이어서 실행합니다. | [`build.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/build.py) |
 | **인용 검증기** (#80) | 초안의 인용과 숫자가 실제 근거 청크와 맞는지 검사합니다. | [`verifier.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/verifier.py) |
 | **비관련 질문 거절** (#58, #79) | 공시에 없는 항목이나 보고서에 없는 반기보고서 요청은 지어내지 않고 사유 코드와 함께 거절합니다. | [`refusal.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/refusal.py) |
