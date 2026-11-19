@@ -1,4 +1,4 @@
-"""프로필 상단 배너(터미널 창 모양)와 연락처 칩(SVG)을 만든다. 표준 라이브러리만 쓴다.
+"""프로필 상단 배너(터미널 창 모양)와 연락처 칩(SVG)을 만든다. 글자는 svgtext로 윤곽선으로 바꿔 기기와 상관없이 같게 보인다.
 
 실행: python assets/make_banner.py
 외부 서비스에 기대지 않는 정적 이미지다. 배너는 라이트/다크 두 벌, 칩은 한 벌씩이다.
@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from pathlib import Path
 from xml.etree import ElementTree as ET
+
+import svgtext
 
 W, H = 800, 250
 SANS = "'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif"
@@ -43,9 +45,9 @@ def banner(mode: str) -> str:
             f'<text x="{W // 2}" y="25" text-anchor="middle" font-family="{MONO}" font-size="14" fill="{t["muted"]}">SJeongHyeon — ~/profile</text>',
             f'<text x="36" y="88" font-family="{MONO}" font-size="22" font-weight="700" fill="{t["green"]}">$</text>',
             f'<text x="60" y="88" font-family="{MONO}" font-size="22" fill="{t["text"]}">whoami</text>',
-            f'<text x="36" y="152" font-family="{SANS}" font-size="56" font-weight="700" fill="{t["text"]}">서정현</text>',
-            f'<text x="36" y="194" font-family="{SANS}" font-size="28" font-weight="600" fill="{t["sub"]}">AI Agent Developer</text>',
-            f'<text x="36" y="228" font-family="{SANS}" font-size="24" fill="{t["muted"]}">RAG · 평가 · FastAPI</text>',
+            svgtext.path("서정현", 34, 150, 54, t["text"], bold=True, kr_wght=700),
+            svgtext.path("AI Agent Developer", 36, 192, 27, t["sub"], bold=True, kr_wght=700),
+            svgtext.path("RAG · 평가 · FastAPI", 36, 227, 23, t["muted"], bold=False, kr_wght=400),
             "</svg>",
         ]
     ) + "\n"
@@ -56,12 +58,10 @@ def banner(mode: str) -> str:
 def chip(label: str, fill: str, width: int) -> str:
     svg = "\n".join(
         [
-            f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" viewBox="0 0 {width} 28" '
-            f'role="img" font-family="{SANS}">',
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" viewBox="0 0 {width} 28" role="img">',
             f"<title>{label}</title>",
             f'<rect width="{width}" height="28" rx="6" fill="{fill}"/>',
-            f'<text x="{width // 2}" y="14" fill="#FFFFFF" font-size="14" font-weight="600" '
-            f'text-anchor="middle" dominant-baseline="central">{label}</text>',
+            svgtext.path(label, width / 2, 19.5, 14, "#FFFFFF", bold=True, kr_wght=700, anchor="middle"),
             "</svg>",
         ]
     ) + "\n"

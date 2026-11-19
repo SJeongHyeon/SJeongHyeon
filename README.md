@@ -128,9 +128,12 @@ Windows에서 예매 시작 시각을 KST 기준으로 관리하는 Python 데�
 
 </details>
 
-### <samp>~/stack</samp>
+### <samp>~/stack</samp> <sub>세 프로젝트에서 실제로 쓴 기술만</sub>
 
-`Python` `FastAPI` `LangGraph` `RAG(하이브리드 검색·리랭크)` `평가(자체 평가셋)` `Langfuse` `pytest` `GitHub Actions` `Docker` `PostgreSQL(pgvector)`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <img alt="기술 스택. Agent·LLM: LangGraph, RAG 검색·리랭크, MCP·n8n, Whisper·KoELECTRA. Backend·Data: Python, FastAPI, PostgreSQL(pgvector), Docker. 평가·품질: 자체 평가셋, Langfuse, pytest, GitHub Actions." src="assets/stack-light.svg" width="100%">
+</picture>
 
 ### <samp>~/contact</samp>
 
