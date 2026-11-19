@@ -11,6 +11,8 @@
 
 **서정현**입니다. AI 서비스를 만들 때는 ‘이 답을 믿을 근거가 있을까?’, ‘사용자가 작업 도중에 멈추고 싶으면 어떻게 할까?’ 같은 질문에서 출발합니다.
 
+AI Human 7기(2026.06–2026.11)를 수료했고, 아래 세 프로젝트는 과정의 팀 프로젝트입니다.
+
 ## 🗂️ 세 프로젝트에서 맡은 일
 
 | 프로젝트 | 해결하는 문제 · 개인 기여 · 확인할 곳 |
@@ -88,6 +90,18 @@ AI 건강정보 상담과 맞춤 음식 추천 서비스입니다. 2026-10-14에
 - **규모**: main 기준 비병합 커밋 290건(공동개발자 94건), 병합 PR 150건(공동개발자 46건), 2026-11-19. 제 커밋은 백엔드(FastAPI)에 모여 있고, 피부 이미지 모델 연구와 PR 자동화는 공동개발자 커밋이 대부분입니다.
 - **검증**: GitHub Actions `Development checks`가 main에서 통과했습니다(2026-11-19, `8aef14b`). 저장소 문서에는 2026-11-11 로컬 실측으로 백엔드 712 통과, 프론트 74 통과, 린트·타입 검사·빌드 통과가 기록돼 있습니다(제가 이번에 다시 실행하지는 않았습니다).
 - **한계**: 데이터는 합성입니다. 실제 의료 자료, 의료진 검토, 임상 안전성, 실제 외부 AI 호출, 브라우저 실사용 시험, 배포는 검증하지 않았습니다. 진단이나 치료를 대신하지 않는 서비스입니다.
+
+### TicketPilot · 개인 프로젝트
+
+Windows에서 예매 시작 시각을 한국 표준시(KST)로 관리하고 알려 주는 작은 데스크톱 도구입니다. 저장소를 만든 날은 2026-10-26이고, 혼자 만들었습니다. [공개 저장소](https://github.com/SJeongHyeon/ticketpilot-public)
+
+| 기여 | 무엇을 어떻게 했나 | 확인할 곳 |
+| :-- | :-- | :-- |
+| **화면과 알림** | CustomTkinter 화면에서 달력과 시·분·초로 시작 시각을 고르면 KST 기준 카운트다운이 돌고, 10분 전·1분 전·정각에 알립니다. 설정은 파일에 저장해 다음 실행 때 불러옵니다. | [`app.py`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/app.py) · [`scheduler.py`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/scheduler.py) · [`date_time_picker.py`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/date_time_picker.py) |
+| **실제 사이트는 조작하지 않는 설계** | 실제 예매 사이트에서는 알림만 주고 **사용자가 직접 클릭**합니다. 자동 클릭은 앱이 띄우는 로컬 테스트 페이지에서만 하며, 예정 시각과 실제 클릭 시각의 차이를 밀리초로 기록합니다. | [`local_test_server.py`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/local_test_server.py) |
+| **입력 검증** | 입력한 주소가 허용된 두 도메인(`nol.yanolja.com`, `ticket.nol.com`)과 그 하위 도메인의 HTTP(S) 주소인지 검사합니다. | [`validators.py`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/validators.py) |
+| **예약 취소** | 중지하면 카운트다운과 로컬 테스트 예약을 함께 취소하고, 테스트 페이지가 닫혀 있으면 예약을 취소합니다. | [`scheduler.py`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/scheduler.py) |
+| **시험과 빌드 구성** | `unittest` 시험 파일 9개와, Windows 실행 파일을 만드는 PyInstaller 구성이 있습니다. 빌드는 이번에 다시 실행해 확인하지 않았습니다. | [`tests/`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/tests) · [`build_exe.ps1`](https://github.com/SJeongHyeon/ticketpilot-public/blob/main/build_exe.ps1) |
 
 ## 📈 Impact · 검증한 결과
 
@@ -182,20 +196,7 @@ AI 건강정보 상담과 맞춤 음식 추천 서비스입니다. 2026-10-14에
 - **한계를 먼저 적습니다.** 표의 수치마다 표본 수, 조건, 사람 평가 여부를 함께 적었습니다.
 - **재현할 수 있게 둡니다.** 세 저장소 모두 API 키 없이 돌리는 시험 결과와 명령을 README에 남겼습니다. CreditPulse와 말해봄은 GitHub Actions에서도 통과했고(2026-11-19 수동 실행), 보이스가드는 CI가 없어 시험 4건 실패의 원인을 기록했습니다.
 
-<details>
-<summary><b>그 밖의 프로젝트</b></summary>
 
-### TicketPilot · 개인 프로젝트
-
-Windows에서 예매 시작 시각을 KST 기준으로 관리하는 Python 데스크톱 도우미입니다.
-
-- CustomTkinter GUI, 날짜·시간 선택, 카운트다운과 사전 알림, 설정 저장
-- URL 검증, 예약 취소·중복 방지, 로컬 테스트 서버와 자동 테스트
-- 실제 예매 사이트에서는 사용자가 직접 예매합니다. 자동 클릭 검증은 로컬 테스트 페이지에서만 수행합니다.
-- Windows 실행 파일 빌드 구성과 사용자 설정 저장 위치 처리까지 구현했습니다.
-- [공개용 코드 저장소](https://github.com/SJeongHyeon/ticketpilot-public)
-
-</details>
 
 
 <details>
