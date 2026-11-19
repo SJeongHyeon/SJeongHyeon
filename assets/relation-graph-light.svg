@@ -43,7 +43,7 @@
 <circle cx="388" cy="296" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
 <text x="388" y="296" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">3</text>
 <rect x="250" y="341" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
-<text x="312" y="358" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">CI(GitHub Actions)</text>
+<text x="312" y="358" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">CI(Actions)</text>
 <circle cx="388" cy="358" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
 <text x="388" y="358" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">2</text>
 <rect x="250" y="403" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>

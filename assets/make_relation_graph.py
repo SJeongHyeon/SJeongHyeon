@@ -27,7 +27,7 @@ TECH = [
     ("t3", "Langfuse", 172),
     ("t4", "평가·측정", 234),
     ("t5", "pytest", 296),
-    ("t6", "CI(GitHub Actions)", 358),
+    ("t6", "CI(Actions)", 358),
     ("t7", "FastAPI", 420),
     ("t8", "MCP·n8n", 482),
     ("t9", "Whisper·KoELECTRA", 544),
