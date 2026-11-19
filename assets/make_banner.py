@@ -93,8 +93,8 @@ def main() -> None:
         p.write_text(banner(mode), encoding="utf-8", newline="\n")
         print("wrote", p.name, p.stat().st_size, "bytes")
     for name, svg in [
-        ("chip-email.svg", badge("Email", "chvodhkd8525@gmail.com", "mail", "#EA4335")),
-        ("chip-portfolio.svg", badge("Portfolio", "ai-agent-portfolio-theta.vercel.app", "triangle", "#111111")),
+        ("badge-email.svg", badge("Email", "chvodhkd8525@gmail.com", "mail", "#EA4335")),
+        ("badge-portfolio.svg", badge("Portfolio", "ai-agent-portfolio-theta.vercel.app", "triangle", "#111111")),
     ]:
         p = here / name
         p.write_text(svg, encoding="utf-8", newline="\n")

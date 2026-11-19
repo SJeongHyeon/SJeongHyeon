@@ -4,8 +4,8 @@
 </picture>
 
 <p align="center">
-  <a href="mailto:chvodhkd8525@gmail.com"><img alt="이메일 보내기" src="assets/chip-email.svg" height="28"></a>
-  <a href="https://ai-agent-portfolio-theta.vercel.app/"><img alt="포트폴리오 사이트 열기" src="assets/chip-portfolio.svg" height="28"></a>
+  <a href="mailto:chvodhkd8525@gmail.com"><img alt="이메일 보내기" src="assets/badge-email.svg" height="28"></a>
+  <a href="https://ai-agent-portfolio-theta.vercel.app/"><img alt="포트폴리오 사이트 열기" src="assets/badge-portfolio.svg" height="28"></a>
 </p>
 
 <p align="center"><i>측정으로 검증하고, 한계도 함께 기록합니다.</i></p>
