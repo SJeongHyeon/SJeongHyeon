@@ -19,6 +19,56 @@
 | [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | 한국어 면접 답변을 분석하고 코칭합니다. 모델·프롬프트 평가 도구, 관측, 테스트와 화면에 기여했습니다.<br>**코칭 응답이 정해진 형식을 지키는지 검사하는 평가 도구**를 만들었습니다. 응답이 중간에 잘린 경우를 분류하고, 자동 판정이 어긋난 사례를 사람이 검토할 양식을 추가했습니다. [기여 근거](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/CONTRIBUTIONS.md) |
 | [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | 통화 녹음에서 보이스피싱 의심 구간을 알려줍니다. FastAPI 백엔드, 비동기 작업과 모델 연동을 맡았습니다.<br>FastAPI에서 **분석 상태를 조회하고 실행 중인 작업을 취소**할 수 있도록 API를 분석 작업에 연결했습니다. 임시 음성 데이터 정리도 맡았습니다. [기여 근거](https://github.com/SJeongHyeon/voiceguard/blob/main/CONTRIBUTIONS.md) · [시연](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/demo/voiceguard_demo.mp4) |
 
+## 🔧 프로젝트별 상세 기여
+
+팀 프로젝트에서 **제가 직접 만든 부분**만 적었습니다. PR 번호는 비공개 원본의 번호이고, 코드 위치는 공개 사본의 경로입니다.
+
+### CreditPulse · LangGraph 에이전트와 평가
+
+| 기여 | 무엇을 어떻게 했나 | 확인할 곳 |
+| :-- | :-- | :-- |
+| **프롬프트 인젝션 방어** (#169) | 질문에 지시문을 숨겨 넣는 공격을 **LLM을 부르지 않는 코드 규칙**으로 막습니다. 전각·제로폭 문자와 비슷하게 생긴 외국 문자를 정규화하고, 문구 단위로 점수를 매겨 **대화 전체의 누적 위험도**를 봅니다(턴마다 0.7배로 줄고, 60 이상이면서 이번 질문에 위험 신호가 있으면 차단하며, 차단된 질문을 표현만 바꿔 다시 보내면 가중). 응답이 나가기 직전에는 키·접속 문자열·시스템 프롬프트 조각이 실려 나가는지 한 번 더 검사합니다. 방어 단위 시험 39건이 공개 사본에서 통과합니다. 공격 차단률 같은 효과 수치는 측정하지 않았습니다. | [`injection_guard.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/injection_guard.py) · [`output_guard.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/output_guard.py) · [`test_injection_guard.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/tests/test_injection_guard.py) · [설계 문서](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/specs/multi-turn-injection-defense.md) |
+| 방어가 만든 부작용 | 작성기 지시문에 인젝션 방어 문장을 더했더니 고정 평가에서 정답 근거 인용이 24건에서 23건으로 줄어(같은 5번 문항, 3회 모두), 그 지시문 문장을 되돌렸습니다. | [`EVAL_REPORT.md` 4-50·4-51](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md) |
+| **승인 대기와 재개** (#89) | 사람 승인 단계에서 그래프를 멈추고 `thread_id`로 상태를 저장해, 승인 뒤 이어서 실행합니다. | [`build.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/build.py) |
+| **인용 검증기** (#80) | 초안의 인용과 숫자가 실제 근거 청크와 맞는지 검사합니다. | [`verifier.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/verifier.py) |
+| **비관련 질문 거절** (#58, #79) | 공시에 없는 항목이나 보고서에 없는 반기보고서 요청은 지어내지 않고 사유 코드와 함께 거절합니다. | [`refusal.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/graph/refusal.py) |
+| **사용자별 규칙 메모리** (#98, #114) | 심사역이 승인한 규칙을 저장하고, 다음 질문에서 의미가 비슷한 규칙을 불러옵니다. | [`memory.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/memory.py) |
+| **리랭커 측정** (#54) | 리랭커 후보 수와 배치 크기에 따른 지연을 측정했습니다. | [`rerank.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/rag/rerank.py) |
+| **API·가입** (#115, #149) | 심사 건 질의·승인 API와 Gmail 인증코드 회원가입을 구현했습니다. | [`reviews.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/api/reviews.py) · [`auth.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/auth.py) |
+| **거절 시 참고 뉴스** (#203) | 거절할 때 붙이는 참고 뉴스에서 다른 회사 이름이 섞인 결과를 사후 필터로 걸러냅니다. | [`news_search.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/services/news_search.py) |
+| **검색 실험** (#235, #239) | 문서 구조 그래프 검색(기본 꺼짐)과 목차 어휘 번역(미채택)을 평가셋으로 재서 결정했습니다. | [사례 연구](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/case-studies/term-bridge-rejected.md) |
+
+### 말해봄 Mk.2 · 모델 평가와 검증 도구
+
+| 기여 | 무엇을 어떻게 했나 | 확인할 곳 |
+| :-- | :-- | :-- |
+| **구조화 출력 평가 실행기** (#14, #16, #19, #43, #45) | 코칭 응답이 JSON Schema 형식을 지키는지 모델·프롬프트 후보마다 자동 채점합니다. | [`evals/`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/evals) |
+| **출력 절단 분류와 사람 검토 양식** (#156, #158, #160, #161) | 응답이 중간에 잘린 경우를 원인별로 분류하고, 4096-token 출력 계약을 다시 검증했습니다. 자동 판정이 어긋난 사례는 사람이 검토할 양식으로 뽑습니다. | [`evals/`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/evals) |
+| **범용 응답 대 서비스 응답 비교** (#67, #68) | 같은 질문을 범용 모델 응답과 말해봄 응답으로 나란히 비교하는 실행기입니다. | [`generic_vs_malhaebom.py`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/evals/generic_vs_malhaebom.py) |
+| **공고 적합성 비교** (#50, #63) | GitHub 근거 기반 공고 적합성 제안과 출력 계약 강제를 구현했습니다. | [`run_github_job_fit_comparison.py`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/evals/run_github_job_fit_comparison.py) |
+| **판단 기준·Prompt·Skill** (#65, #84, #85, #86, #110) | 원인 판단을 관찰 신호와 추론으로 나누고, README 근거 추출·공고 요구사항 추출 Skill과 Prompt를 분리했습니다. | [`skills/`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/skills) |
+| **Langfuse 관측** (#107, #108) | provider 호출의 시작·종료와 지연 시간 기록을 바로잡았습니다. | [`coaching_observability.py`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/backend/app/services/coaching_observability.py) |
+| **응답 계약·장애 검증** (#113, #116, #117, #122, #142, #172) | 인증된 Agent 응답 계약, MCP 장애 응답, 코칭 결과의 DB 저장을 검증하는 도구를 추가했습니다. | [`backend/tests/`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/backend/tests) |
+| **CI와 재현** (#44, #124, #133, #135, #144, #145) | Product CI에 pytest를 추가하고, 새 복제본의 Docker Compose 실행을 검증했으며, n8n 모의 코칭 워크플로를 만들었습니다. | [`product-ci.yml`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/.github/workflows/product-ci.yml) · [재현 점검](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/docs/evidence/clean-compose-reproduction-20261010.md) |
+| **화면** (#211) | 시작 화면과 라이트·다크 테마 전환을 추가했습니다. 발표용 PPT도 제작했습니다(발표는 담당하지 않음). | [`frontend/`](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/frontend) |
+
+<sub>말해봄의 코드 위치는 PR별 변경 파일을 일일이 대조하지 않고 이름과 역할이 맞는 공개 사본의 경로를 적었습니다.</sub>
+
+### 보이스가드 · FastAPI 백엔드
+
+| 기여 | 무엇을 어떻게 했나 | 확인할 곳 |
+| :-- | :-- | :-- |
+| **API 계약과 공통 오류** (#10~#13) | 백엔드 API 명세를 쓰고, 음성 파일 업로드 검증과 공통 오류 응답을 구현했습니다. | [`backend-api.md`](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/specs/backend-api.md) · [`app/api/`](https://github.com/SJeongHyeon/voiceguard/blob/main/app/api) |
+| **비동기 작업과 취소** (#15~#18, #21, #27) | 분석 작업 저장소, 상태 조회, **실행 중인 작업 취소**, 끝난 뒤 임시 음성 데이터 정리를 연결했습니다. | [`app/jobs/`](https://github.com/SJeongHyeon/voiceguard/blob/main/app/jobs) |
+| **요청 제어** (#19) | 같은 작업 중복 실행 잠금, 요청 횟수 제한을 넣었고, 접속 IP는 HMAC-SHA256으로 해시해 다룹니다. | [`request_controls.py`](https://github.com/SJeongHyeon/voiceguard/blob/main/app/core/request_controls.py) |
+| **모델 연동** (#33, #34, #35, #37, #39, #43, #44) | KoELECTRA 분류기와 Whisper(LoRA 포함) 음성 인식을 서비스에 연결하고, 음성 바이트 디코딩과 추론 시간 제한을 고쳤습니다. | [`app/analysis/`](https://github.com/SJeongHyeon/voiceguard/blob/main/app/analysis) |
+| **분석 파이프라인** (#47, #49, #50, #51, #58) | 6단계 진행 상태를 보여 주고, 전사문 정규화 뒤 청크 단위로 분류하며, 전사와 분류를 큐로 이어 주는 스트리밍 파이프라인을 만들었습니다. | [`app/analysis/`](https://github.com/SJeongHyeon/voiceguard/blob/main/app/analysis) |
+| **검증 도구** (#36, #56) | 업로드부터 결과·실패·취소·정리까지의 E2E 시험과, 라벨 데이터로 혼동행렬과 Recall·FPR 등을 계산하는 평가 도구를 추가했습니다. | [E2E 시험](https://github.com/SJeongHyeon/voiceguard/blob/main/tests/api/test_analysis_pipeline_e2e.py) · [`model_evaluation.py`](https://github.com/SJeongHyeon/voiceguard/blob/main/tools/model_evaluation.py) |
+| **컨테이너 설정** (#20) | 컨테이너 실행 구성을 작성했습니다. | [`Dockerfile`](https://github.com/SJeongHyeon/voiceguard/blob/main/Dockerfile) |
+| **ONNX INT8 도입과 롤백** (#57, #62) | 분류기를 ONNX INT8로 바꿨다가 위험 점수가 0.99 이상으로 포화돼 PyTorch로 되돌렸습니다. 원인은 확정하지 못했습니다. | [사례 연구](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/case-studies/onnx-int8-rollback.md) |
+
+팀 모델의 학습과 성능 수치는 팀의 결과이고, 위 표는 제가 맡은 서비스 구현과 검증 부분입니다. 비공개 원본의 PR 번호별 내용은 각 저장소의 `CONTRIBUTIONS.md`에 있습니다.
+
 ## 📈 Impact · 검증한 결과
 
 아래 수치는 **팀 프로젝트의 측정 결과**이며 개인 기여와 구분합니다. 결과의 조건과 한계를 함께 적었습니다.
@@ -93,7 +143,7 @@
 숫자는 비공개 원본의 PR 번호이며, 각 저장소의 `CONTRIBUTIONS.md`에서 내용을 확인할 수 있습니다.
 
 | 기술 | CreditPulse | 말해봄 | 보이스가드 |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | FastAPI | 심사 API·로그인 | 응답 계약 검증 #113·#116(점선) | #11·#12·#13·#15·#16·#17·#18·#19·#27 |
 | 평가·측정 | 평가셋·사전 등록·`EVAL_REPORT.md` | 평가 실행기 #14·#19·#43·#45 | 분류 평가 도구 #56 |
 | pytest | 키 없이 1626 통과(사본 재실행) | Product CI에 pytest 추가 #145 | E2E #36, 요청 제어 #19, 평가 도구 #56 |
@@ -113,36 +163,7 @@
 - **재현할 수 있게 둡니다.** 세 저장소 모두 API 키 없이 돌리는 시험 결과와 명령을 README에 남겼습니다. CreditPulse와 말해봄은 GitHub Actions에서도 통과했고(2026-11-19 수동 실행), 보이스가드는 CI가 없어 시험 4건 실패의 원인을 기록했습니다.
 
 <details>
-<summary><b>프로젝트별 상세 기여</b></summary>
-
-팀 프로젝트에서는 개인 기여와 검증 범위를 구분해 기록합니다. 비공개 원본의 PR은 번호만 각 저장소의 `CONTRIBUTIONS.md`([CreditPulse](https://github.com/SJeongHyeon/credit-pulse/blob/main/CONTRIBUTIONS.md) · [말해봄](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/CONTRIBUTIONS.md) · [보이스가드](https://github.com/SJeongHyeon/voiceguard/blob/main/CONTRIBUTIONS.md))에 적었습니다.
-
-### CreditPulse · 팀 프로젝트
-
-- **에이전트·승인:** 단일 에이전트와 Supervisor·검색·작성 서브에이전트 구성, 사람 승인 interrupt와 체크포인트 재개, 사용자 규칙 메모리를 구현했습니다.
-- **검색·평가:** 평가셋과 계약, 리랭커 측정, 비관련 질문 거절, 인용·숫자 검증, 그래프 검색 실험(미채택 결과 포함)을 맡았습니다.
-- **서비스:** 심사 API, 로그인·가입, 화면, 거절 시 참고 뉴스, 프롬프트 인젝션 방어를 구현했습니다.
-- **근거 문서:** 시장 근거 문서를 정리했습니다.
-- 결과는 팀의 결과이고, 정답 판정과 결과 검토는 다른 팀원이 맡은 부분이 있습니다.
-
-### 말해봄 Mk.2 · 팀 프로젝트
-
-- **모델 평가 도구:** 구조화 출력 평가 실행기, 동일 모델의 범용 응답·서비스 응답 비교 실행기, README 근거·공고 적합성 비교와 출력 검증을 구현했습니다.
-- **출력 신뢰성:** JSON Schema 요청과 출력 절단 오류 분류를 보완하고, 모델·프롬프트 후보를 재평가했습니다. 자동 판정이 어긋난 사례를 사람이 검토할 양식과 사전 검사 도구를 추가했습니다.
-- **판단 기준·Prompt:** 원인 판단을 관찰 신호와 추론 연결로 나누고, README·공고 분석 규칙의 버전 관리와 Prompt 구성을 정리했습니다.
-- **관측·장애 검증:** Langfuse provider 호출의 시작·종료 및 지연 시간 계측을 수정했습니다. MCP 장애 응답, 코칭 결과의 DB 저장, 요청·응답 근거를 확인하는 검증 도구를 추가했습니다.
-- **재현·자동화:** 새 복제본의 Docker Compose 실행과 로컬 E2E를 검증하고, pytest CI·배포 health/CORS 검사·n8n 모의 코칭 콜백 워크플로를 보강했습니다. Windows 인코딩·토큰 파일 처리 문제도 수정했습니다.
-- **사용자 화면·전달:** 시작 화면과 연습 진입 버튼, 라이트/다크 테마 전환 및 상태별 일러스트를 추가하고 발표용 PPT를 제작했습니다.
-- 평가·실험 도구와 운영 제품의 적용 범위는 구분합니다. 과거 평가와 일부 연결 검증은 현재 전체 서비스 품질을 보장하지 않습니다. PPT 제작을 담당했으며 발표는 담당하지 않았습니다.
-
-### 보이스가드 · 팀 프로젝트
-
-- **백엔드 API:** FastAPI API 계약, 파일 업로드 검증, 공통 오류 응답과 요청 추적, 모델 준비 상태 확인을 구현했습니다.
-- **비동기 작업·보호 장치:** 작업 상태·결과 조회와 실제 실행 작업 취소, 임시 음성 자료 정리, 중복 작업 잠금·요청 제한·IP 해시 처리를 연결했습니다.
-- **음성·분류 파이프라인:** Whisper/LoRA 및 KoELECTRA 실행 연동, 전사문 정규화, 음성·텍스트 청킹, 위험 점수·상위 구간 집계와 단계별 진행률을 구현했습니다. 청크 전사·분류를 큐로 연결하는 스트리밍 파이프라인도 추가했습니다.
-- **실행 설정·문제 해결:** Docker 실행 설정, 음성 바이트 디코딩 수정, 분석 시간 제한을 맡았고, ONNX INT8 분류기를 도입했다가 점수 포화 현상이 관찰되어 PyTorch로 되돌렸습니다(원인은 확정하지 못함).
-- **검증 도구:** 업로드부터 결과·실패·취소·정리까지의 E2E 테스트와 분류 평가 지표·혼동행렬을 산출하는 도구를 추가했습니다.
-- 모델 학습 성과는 팀의 성과이며, 여기서는 제가 담당한 실행 연동·서비스 구현·검증 기여를 소개합니다.
+<summary><b>그 밖의 프로젝트</b></summary>
 
 ### TicketPilot · 개인 프로젝트
 
