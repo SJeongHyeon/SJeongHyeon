@@ -16,6 +16,33 @@
 
 커밋·PR 수는 비공개 원본 저장소에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. 팀 성과와 내 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 나눠 적었습니다.
 
+## 프로젝트와 기술의 관계
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/relation-graph-dark.svg">
+  <img alt="서정현이 CreditPulse, 말해봄, 보이스가드에서 쓴 기술의 관계도. 평가·측정, pytest·CI, FastAPI는 세 프로젝트가 함께 쓰고 Langfuse는 두 프로젝트가 씁니다." src="assets/relation-graph-light.svg" width="720">
+</picture>
+
+<sub>선 색은 프로젝트, 노란 기술은 둘 이상의 프로젝트에서 쓴 기술이고 숫자는 사용한 프로젝트 수입니다. 직접 그린 관계도이며([생성 스크립트](assets/make_relation_graph.py)) 실제로 쓴 기술만 넣었습니다.</sub>
+
+<details>
+<summary><b>이 관계도의 근거</b></summary>
+
+숫자는 비공개 원본의 PR 번호이며, 각 저장소의 `CONTRIBUTIONS.md`에서 내용을 확인할 수 있습니다.
+
+| 기술 | CreditPulse | 말해봄 Mk.2 | 보이스가드 |
+| --- | --- | --- | --- |
+| FastAPI | 심사 API·로그인(`backend/`) | Agent 응답 계약 검증(#113·#116) | API 전반(#10–#21) |
+| 평가·측정 | 평가셋·사전 등록·`EVAL_REPORT.md` | 모델 평가 실행기(#14·#19·#43·#45) | 분류 평가 도구(#56) |
+| pytest·CI | CI 워크플로, 키 없이 1626 통과 | Product CI에 pytest 추가(#145) | 파이프라인 E2E 시험(#36) |
+| Langfuse | 트레이스·관측(`backend/services/tracing.py`) | 호출 지연 계측(#107·#108) | 해당 없음 |
+| LangGraph | Supervisor·승인 interrupt(`backend/graph/`) | 해당 없음 | 해당 없음 |
+| RAG 검색·리랭크 | 하이브리드 검색·리랭크(`EVAL_REPORT.md` 3장) | 해당 없음 | 해당 없음 |
+| MCP·n8n | 해당 없음 | MCP 장애 계약 검증·n8n 모의 워크플로(#142·#44) | 해당 없음 |
+| Whisper·KoELECTRA | 해당 없음 | 해당 없음 | 모델 연동(#33·#34·#37) |
+
+</details>
+
 ## 어떻게 일하나
 
 - **미채택도 기록합니다.** CreditPulse의 [평가 리포트](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md)에는 미채택으로 표시한 실험이 22개 절 있고, 측정 전에 기준을 먼저 등록한 뒤 결과가 기준에 못 미치면 되돌렸습니다.
