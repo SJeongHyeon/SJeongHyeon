@@ -55,13 +55,30 @@ def banner(mode: str) -> str:
     return svg
 
 
-def chip(label: str, fill: str, width: int) -> str:
+ICONS = {
+    # 14x14 안에 흰색으로 그린 아이콘
+    "mail": '<rect x="0.8" y="2.5" width="12.4" height="9" rx="1.5" fill="none" stroke="#fff" stroke-width="1.6"/>'
+            '<path d="M1.5 3.8L7 8L12.5 3.8" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>',
+    "triangle": '<path d="M7 1.5L13.2 12.3H0.8Z" fill="#fff"/>',
+}
+
+
+def badge(label: str, value: str, icon: str, right_fill: str, left_fill: str = "#555555") -> str:
+    """왼쪽(아이콘+이름)과 오른쪽(값)이 색으로 나뉜 두 칸짜리 배지."""
+    size, pad, gap, icon_w, h = 14, 10, 6, 14, 28
+    lw = pad + icon_w + gap + svgtext.measure(label, size, bold=True, kr_wght=700) + pad
+    rw = pad + svgtext.measure(value, size, bold=True, kr_wght=700) + pad
+    w = lw + rw
     svg = "\n".join(
         [
-            f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" viewBox="0 0 {width} 28" role="img">',
-            f"<title>{label}</title>",
-            f'<rect width="{width}" height="28" rx="6" fill="{fill}"/>',
-            svgtext.path(label, width / 2, 19.5, 14, "#FFFFFF", bold=True, kr_wght=700, anchor="middle"),
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="{h}" viewBox="0 0 {w:.1f} {h}" role="img">',
+            f"<title>{label}: {value}</title>",
+            f'<clipPath id="r"><rect width="{w:.1f}" height="{h}" rx="4"/></clipPath>',
+            f'<g clip-path="url(#r)"><rect width="{lw:.1f}" height="{h}" fill="{left_fill}"/>'
+            f'<rect x="{lw:.1f}" width="{rw:.1f}" height="{h}" fill="{right_fill}"/></g>',
+            f'<g transform="translate({pad},7)">{ICONS[icon]}</g>',
+            svgtext.path(label, pad + icon_w + gap, 19, size, "#FFFFFF", bold=True, kr_wght=700),
+            svgtext.path(value, lw + pad, 19, size, "#FFFFFF", bold=True, kr_wght=700),
             "</svg>",
         ]
     ) + "\n"
@@ -75,12 +92,12 @@ def main() -> None:
         p = here / f"banner-{mode}.svg"
         p.write_text(banner(mode), encoding="utf-8", newline="\n")
         print("wrote", p.name, p.stat().st_size, "bytes")
-    for name, label, fill, width in [
-        ("chip-portfolio.svg", "Portfolio ↗", "#24292f", 130),
-        ("chip-email.svg", "Email · chvodhkd8525@gmail.com", "#C5221F", 280),
+    for name, svg in [
+        ("chip-email.svg", badge("Email", "chvodhkd8525@gmail.com", "mail", "#EA4335")),
+        ("chip-portfolio.svg", badge("Portfolio", "ai-agent-portfolio-theta.vercel.app", "triangle", "#111111")),
     ]:
         p = here / name
-        p.write_text(chip(label, fill, width), encoding="utf-8", newline="\n")
+        p.write_text(svg, encoding="utf-8", newline="\n")
         print("wrote", p.name, p.stat().st_size, "bytes")
 
 
