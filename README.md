@@ -37,6 +37,9 @@
 | **API·가입** (#115, #149) | 심사 건 질의·승인 API와 Gmail 인증코드 회원가입을 구현했습니다. | [`reviews.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/api/reviews.py) · [`auth.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/auth.py) |
 | **거절 시 참고 뉴스** (#203) | 거절할 때 붙이는 참고 뉴스에서 다른 회사 이름이 섞인 결과를 사후 필터로 걸러냅니다. | [`news_search.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/services/news_search.py) |
 | **검색 실험** (#235, #239) | 문서 구조 그래프 검색(기본 꺼짐)과 목차 어휘 번역(미채택)을 평가셋으로 재서 결정했습니다. | [사례 연구](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/case-studies/term-bridge-rejected.md) |
+| **평가 지표 계산기** | 정답 근거 인용·오답 근거·과잉 거절·올바른 거절·환각 위험을 **하나의 정확도로 합치지 않고 따로** 보고하는 지표 5개를 계산합니다. | [`evaluation.py`](https://github.com/SJeongHyeon/credit-pulse/blob/main/backend/rag/evaluation.py) |
+| **평가셋 질문 작성** | 평가셋 v1의 질문 30건을 썼습니다. 정답 근거 판정은 다른 팀원이 맡아 작성자와 판정자를 나눴습니다. | [`evals/`](https://github.com/SJeongHyeon/credit-pulse/blob/main/evals) |
+| **계정 분리 확인** | 배포 주소에서 계정 2개로 심사 건과 규칙이 서로 보이지 않는지 확인했습니다. | [증거 문서](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/evidence/f3_account_isolation_2026-11-10.md) |
 
 ### 말해봄 Mk.2 · 모델 평가와 검증 도구
 
@@ -68,6 +71,23 @@
 | **ONNX INT8 도입과 롤백** (#57, #62) | 분류기를 ONNX INT8로 바꿨다가 위험 점수가 0.99 이상으로 포화돼 PyTorch로 되돌렸습니다. 원인은 확정하지 못했습니다. | [사례 연구](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/case-studies/onnx-int8-rollback.md) |
 
 팀 모델의 학습과 성능 수치는 팀의 결과이고, 위 표는 제가 맡은 서비스 구현과 검증 부분입니다. 비공개 원본의 PR 번호별 내용은 각 저장소의 `CONTRIBUTIONS.md`에 있습니다.
+
+### MultiHealth · 비공개 2인 프로젝트(진행 중)
+
+AI 건강정보 상담과 맞춤 음식 추천 서비스입니다. 2026-10-14에 시작해 공동개발자와 서로 리뷰하고 승인하는 규칙으로 개발합니다. 저장소가 비공개라 링크는 없고, 코드와 화면은 면접에서 보여 드릴 수 있습니다. 건강 서비스라서 **'모르면 보류한다'**는 안전 경계를 중심에 두었습니다.
+
+| 기여 | 무엇을 어떻게 했나 | 비공개 저장소의 위치 |
+| :-- | :-- | :-- |
+| **독립 안전 검사 경계** | 상담 결과를 만들기 전에 별도 안전 검사를 거치게 하고, 검토된 의료 규칙이 없으면 "안전하다"고 하지 않고 항상 **검사 불가로 보류**합니다. 검사가 실패해도 통과시키지 않는 실패 폐쇄 방식입니다. | `safety.py` |
+| **의료 RAG의 인용·출처 경계** | 출처와 문서 버전을 저장하고, 안전 검사를 통과한 경우에만 검색합니다. 인용은 허용 목록과 HTTPS 출처로 제한하고, 검색 본문에 섞인 프롬프트 인젝션 문구를 걸러냅니다. | `evidence_search.py` · `rag_content_security.py` |
+| **외부 AI 전송 차단 정책** | 외부 모델로 보내기 전에 이메일·전화번호 같은 직접 식별자를 걸러내고, 허용되지 않은 전송은 막습니다. | `external_ai_egress.py` |
+| **회원 인증·동의·이력** | 가입·이메일 확인·로그인·동의 변경·계정 삭제·비밀번호 재설정을 구현했습니다. 동의한 경우에만 상담 이력을 저장하고, 개별 삭제와 계정 삭제 때 함께 지워집니다. | `member_registration.py` · `member_consents.py` · `member_history.py` |
+| **상담 보고서 PDF** | 검증된 상담 보고서를 입력 시점의 내용에 묶어 한글 PDF로 만듭니다(서버 메모리에서 생성). | `report_pdf_renderer.py` |
+| **식단 추천의 알레르기 제한** | 추천을 만들기 전후에 알레르기 재료를 규칙으로 걸러냅니다(합성 데이터로 검증). | `food_safety.py` |
+
+- **규모**: main 기준 비병합 커밋 290건(공동개발자 94건), 병합 PR 150건(공동개발자 46건), 2026-11-19. 제 커밋은 백엔드(FastAPI)에 모여 있고, 피부 이미지 모델 연구와 PR 자동화는 공동개발자 커밋이 대부분입니다.
+- **검증**: GitHub Actions `Development checks`가 main에서 통과했습니다(2026-11-19, `8aef14b`). 저장소 문서에는 2026-11-11 로컬 실측으로 백엔드 712 통과, 프론트 74 통과, 린트·타입 검사·빌드 통과가 기록돼 있습니다(제가 이번에 다시 실행하지는 않았습니다).
+- **한계**: 데이터는 합성입니다. 실제 의료 자료, 의료진 검토, 임상 안전성, 실제 외부 AI 호출, 브라우저 실사용 시험, 배포는 검증하지 않았습니다. 진단이나 치료를 대신하지 않는 서비스입니다.
 
 ## 📈 Impact · 검증한 결과
 
