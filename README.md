@@ -10,7 +10,7 @@ AI 서비스의 구현과 평가·검증을 함께 고민하는 개발자 서정
 | 프로젝트 | 소개 | 주요 기여 | 바로가기 |
 | --- | --- | --- | --- |
 | 말해봄 Mk.2 · 팀 | 한국어 면접 연습·코칭 서비스 | 모델 평가, E2E·회귀 테스트, CI, 사용자 화면 | [공개 소개](https://nanocode00.github.io/malhaebom-showcase/) |
-| 보이스가드 · 팀 | 통화 녹음 기반 보이스피싱 분석 서비스 | 백엔드 API, 음성·분류 연동, 배포·검증 | [팀 저장소](https://github.com/aihuman-7th/proj1-e) |
+| 보이스가드 · 팀 | 통화 녹음 기반 보이스피싱 분석 서비스 | 백엔드 API, 음성·분류 연동, 배포·검증 | [공개용 사본](https://github.com/SJeongHyeon/voiceguard) |
 | TicketPilot · 개인 | Windows 예매 시작 알림 도우미 | GUI, 예약·알림, 설정 저장, 자동 테스트 | [공개 코드](https://github.com/SJeongHyeon/ticketpilot-public) |
 
 ## 프로젝트별 상세 기여
@@ -40,7 +40,7 @@ AI 서비스의 구현과 평가·검증을 함께 고민하는 개발자 서정
 - **배포·문제 해결:** Docker/Railway 실행 설정, 음성 바이트 디코딩 수정, 분석 시간 제한, ONNX INT8 도입과 점수 포화 문제에 대응한 PyTorch 롤백을 수행했습니다.
 - **검증 도구:** 업로드부터 결과·실패·취소·정리까지의 E2E 테스트와 분류 평가 지표·혼동행렬을 산출하는 도구를 추가했습니다.
 - 모델 학습 성과는 팀의 성과이며, 여기서는 제가 담당한 실행 연동·서비스 구현·검증 기여를 소개합니다.
-- [팀 저장소](https://github.com/aihuman-7th/proj1-e)
+- [공개용 사본](https://github.com/SJeongHyeon/voiceguard) · [내 기여 정리](https://github.com/SJeongHyeon/voiceguard/blob/main/CONTRIBUTIONS.md) · 원본 팀 저장소는 비공개이며, 백엔드 배포는 현재 내려가 있어 README의 시연 영상으로 확인할 수 있습니다.
 
 ### TicketPilot · 개인 프로젝트
 
