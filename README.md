@@ -24,11 +24,11 @@ class SJeongHyeon:
 
 ### <samp>~/featured</samp> <sub>세 프로젝트 모두 개발 종료</sub>
 
-| Project | 한 줄 | 내 역할 | 상태 |
-| :-- | :-- | :-- | :-- |
-| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse) | 기업여신 심사역이 DART 사업보고서에서 근거를 찾아 판정 초안을 받고, 승인한 것만 저장하는 RAG·LangGraph 에이전트 | LangGraph 에이전트, 평가 | 코드·영상 공개 · CI 통과 |
-| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | 한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 코칭하는 서비스 | 모델 평가·검증 도구, 관측·CI, 화면 | 코드 공개 · CI 통과 · [팀 소개](https://nanocode00.github.io/malhaebom-showcase/) |
-| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 구간을 알려 주는 서비스 | 백엔드(FastAPI), 비동기 작업, 모델 연동 | 코드·영상 공개 · 배포 내려감 |
+| Project | 한 줄 | 내 역할 · 상태 |
+| :-- | :-- | :-- |
+| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse) | 기업여신 심사역이 DART 사업보고서에서 근거를 찾아 판정 초안을 받고, 승인한 것만 저장하는 RAG·LangGraph 에이전트 | LangGraph 에이전트, 평가<br><sub>코드·영상 공개 · CI 통과</sub> |
+| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | 한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 코칭하는 서비스 | 모델 평가·검증 도구, 관측·CI, 화면<br><sub>코드 공개 · CI 통과 · [팀 소개](https://nanocode00.github.io/malhaebom-showcase/)</sub> |
+| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 구간을 알려 주는 서비스 | 백엔드(FastAPI), 비동기 작업, 모델 연동<br><sub>코드·영상 공개 · 배포 내려감</sub> |
 
 <sub>커밋·PR은 비공개 원본에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. CreditPulse 커밋 203건·PR 65건(병합 62), 말해봄 89건·PR 39건, 보이스가드 47건·PR 28건(병합 27). 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 있습니다. CI 통과는 2026-11-19 GitHub Actions 수동 실행 결과입니다.</sub>
 
