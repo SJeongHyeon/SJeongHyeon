@@ -1,11 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180" role="img" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
-<title>서정현 | AI Agent Developer — GitHub 공개 프로필</title>
-<desc>서정현의 GitHub 공개 프로필 배너. RAG, 평가, FastAPI.</desc>
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEEDFE"/><stop offset="1" stop-color="#E1F5EE"/></linearGradient>
-</defs>
-<rect width="800" height="180" rx="16" fill="url(#bg)"/>
-<text x="40" y="70" fill="#26215C" font-size="48" font-weight="700">서정현</text>
-<text x="40" y="112" fill="#3C3489" font-size="28" font-weight="600">AI Agent Developer</text>
-<text x="40" y="150" fill="#444441" font-size="24">GitHub 공개 프로필 · RAG · 평가 · FastAPI</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="250" viewBox="0 0 800 250" role="img">
+<title>서정현 | AI Agent Developer</title>
+<desc>서정현의 프로필 배너. AI Agent Developer. RAG, 평가, FastAPI.</desc>
+<clipPath id="c"><rect x="1" y="1" width="798" height="248" rx="14"/></clipPath>
+<g clip-path="url(#c)"><rect width="800" height="250" fill="#ffffff"/><rect width="800" height="40" fill="#f6f8fa"/><path d="M0 40.5H800" stroke="#d0d7de"/></g>
+<rect x="1" y="1" width="798" height="248" rx="14" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+<circle cx="24" cy="20" r="6" fill="#ff5f57"/>
+<circle cx="44" cy="20" r="6" fill="#febc2e"/>
+<circle cx="64" cy="20" r="6" fill="#28c840"/>
+<text x="400" y="25" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" fill="#59636e">SJeongHyeon — ~/profile</text>
+<text x="36" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="22" font-weight="700" fill="#1a7f37">$</text>
+<text x="60" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="22" fill="#1f2328">whoami</text>
+<text x="36" y="152" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="56" font-weight="700" fill="#1f2328">서정현</text>
+<text x="36" y="194" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="28" font-weight="600" fill="#3C3489">AI Agent Developer</text>
+<text x="36" y="228" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif" font-size="24" fill="#59636e">RAG · 평가 · FastAPI</text>
 </svg>

@@ -1,43 +1,54 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="서정현 | AI Agent Developer — GitHub 공개 프로필 배너" src="assets/banner-light.svg" width="100%">
+  <img alt="서정현 | AI Agent Developer" src="assets/banner-light.svg" width="100%">
 </picture>
 
 <p align="center">
+  <a href="mailto:chvodhkd8525@gmail.com"><img alt="이메일 보내기" src="assets/chip-email.svg" height="28"></a>
   <a href="https://ai-agent-portfolio-theta.vercel.app/"><img alt="포트폴리오 사이트 열기" src="assets/chip-portfolio.svg" height="28"></a>
 </p>
 
-```text
-~/about
-profile   GitHub 공개 프로필
-repos     저장소 3개 공개 · 핀 고정
-focus     RAG · 평가 · FastAPI
-approach  측정으로 검증, 한계도 기록
+<p align="center"><i>측정으로 검증하고, 한계도 함께 기록합니다.</i></p>
+
+### <samp>~/about</samp>
+
+```python
+class SJeongHyeon:
+    role    = "AI Agent Developer"
+    now     = "AI Human 7기 수료"
+    focus   = ["rag", "evaluation", "fastapi"]
+    contact = "chvodhkd8525@gmail.com"
 ```
 
-## 대표 프로젝트
+검색·평가·API로 동작하는 AI 에이전트를 만들고, 결과는 좋은 값과 한계를 같이 적습니다. 이 페이지는 제 GitHub 공개 프로필이며, 아래 저장소 3개는 수료 과정 팀 프로젝트의 공개용 사본입니다.
 
-세 프로젝트 모두 수료 과정의 팀 프로젝트이며 개발은 끝났습니다. 수치는 좋은 값과 반대 값, 표본과 조건을 함께 적었고 각 저장소의 결과표에서 근거 파일을 확인할 수 있습니다.
+### <samp>~/featured</samp> <sub>세 프로젝트 모두 개발 종료</sub>
 
-| 프로젝트 | 결과 | 내 역할 · 상태 |
-| --- | --- | --- |
-| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse)<br><sub>기업여신 심사역이 DART 사업보고서에서 체크리스트 항목의 근거를 찾아 판정 초안을 받고, 승인한 것만 메모로 저장하는 RAG·LangGraph 에이전트</sub> | **정답 근거 인용 23/25 · 오답 근거 0/25**<br><sub>동결 평가셋 v2의 관련 25문항, 1회 실행(2026-11-12 UTC) · 같은 평가셋으로 실험을 골랐음 · [근거](https://github.com/SJeongHyeon/credit-pulse#측정-결과)</sub> | LangGraph 에이전트와 평가<br><sub>커밋 203건, PR 65건(병합 62) · 코드·시연 영상 공개 · CI 통과(Actions, 2026-11-19)</sub> |
-| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2)<br><sub>한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 답변 근거를 바탕으로 코칭하는 서비스</sub> | **종합 자동 통과 57/90 · 형식(출력 계약) 90/90**<br><sub>합성 입력 30건 × 3회(2026-10-06) · 최신 운영 구성의 사람 평가는 없음 · [근거](https://github.com/SJeongHyeon/malhaebom-mk2#측정-결과)</sub> | 모델 평가·검증 도구, 관측·CI, 사용자 화면<br><sub>커밋 89건, PR 39건 · 코드 공개(영상 없음) · CI 통과(Actions, 2026-11-19) · [팀 소개 사이트](https://nanocode00.github.io/malhaebom-showcase/)</sub> |
-| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard)<br><sub>통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 대화 구간을 알려 주는 서비스</sub> | **팀 모델 평가 Recall 98.98% · 오탐률(FPR) 48.84%**<br><sub>499개 샘플, 독립 시험셋 확인 전 · 저장소 시험 146 통과·4 실패(팀 코드 포함, 사본 재실행) · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과)</sub> | 백엔드(FastAPI), 비동기 작업·요청 제어, 모델 연동<br><sub>커밋 47건, PR 28건(병합 27) · 코드·시연 영상 공개 · 백엔드 배포는 현재 내려감 · CI 없음</sub> |
+| Project | 한 줄 | 내 역할 | 상태 |
+| :-- | :-- | :-- | :-- |
+| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse) | 기업여신 심사역이 DART 사업보고서에서 근거를 찾아 판정 초안을 받고, 승인한 것만 저장하는 RAG·LangGraph 에이전트 | LangGraph 에이전트, 평가 | 코드·영상 공개 · CI 통과 |
+| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | 한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 코칭하는 서비스 | 모델 평가·검증 도구, 관측·CI, 화면 | 코드 공개 · CI 통과 · [팀 소개](https://nanocode00.github.io/malhaebom-showcase/) |
+| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 구간을 알려 주는 서비스 | 백엔드(FastAPI), 비동기 작업, 모델 연동 | 코드·영상 공개 · 배포 내려감 |
 
-커밋·PR 수는 비공개 원본 저장소에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. 팀 성과와 내 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 나눠 적었습니다.
+<sub>커밋·PR은 비공개 원본에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. CreditPulse 커밋 203건·PR 65건(병합 62), 말해봄 89건·PR 39건, 보이스가드 47건·PR 28건(병합 27). 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 있습니다. CI 통과는 2026-11-19 GitHub Actions 수동 실행 결과입니다.</sub>
 
 **시연 영상**: [CreditPulse](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/demo/creditpulse_demo.mp4) · [보이스가드 원본 녹화(직접 녹화, 소리 포함, Google Drive)](https://drive.google.com/file/d/1u3DY856VDEZkHz8jf1ajQzmT7vNgpgHn/view?usp=sharing) · [보이스가드(서비스 화면만)](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/demo/voiceguard_demo.mp4)
 
-## 사례 연구
+### <samp>~/results</samp> <sub>좋은 값과 반대 값을 같은 크기로, 조건과 함께</sub>
 
-결과가 좋지 않거나 원인을 모르는 경우도 같은 표에 적었습니다. 각 글은 한 쪽입니다.
+| Project | 측정 | 조건 · 한계 |
+| :-- | :-- | :-- |
+| CreditPulse | **정답 근거 인용 23/25 · 오답 근거 0/25** | 동결 평가셋 v2의 관련 25문항, 1회 실행(2026-11-12 UTC). 같은 평가셋으로 실험을 골랐음 · [근거](https://github.com/SJeongHyeon/credit-pulse#측정-결과) |
+| 말해봄 Mk.2 | **종합 자동 통과 57/90 · 형식(출력 계약) 90/90** | 합성 입력 30건 × 3회(2026-10-06). 최신 운영 구성의 사람 평가는 없음 · [근거](https://github.com/SJeongHyeon/malhaebom-mk2#측정-결과) |
+| 보이스가드 | **팀 모델 평가 Recall 98.98% · 오탐률(FPR) 48.84%** | 499개 샘플, 독립 시험셋 확인 전. 저장소 시험 146 통과·4 실패(팀 코드 포함, 사본 재실행) · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과) |
+
+### <samp>~/cases</samp> <sub>결과가 좋지 않거나 원인을 모르는 경우도 같은 표에 적었습니다</sub>
 
 - **미채택 · CreditPulse**: [목차 어휘 번역](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/case-studies/term-bridge-rejected.md). 첫 검색 Hit@10 20/23 → 22/23이지만 검색 p50 1.73초 → 4.00초로 사전 한도(+1.5초)를 넘어 미채택했습니다.
 - **승격 보류 · 말해봄**: [Prompt v5 후보](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/docs/case-studies/prompt-v4-v5-candidate.md). 비용은 약 13.3% 줄었지만 종합 자동 통과가 22/30 → 20/30으로 줄어 승격을 보류했습니다.
 - **임시 롤백 · 보이스가드**: [ONNX INT8 분류기](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/case-studies/onnx-int8-rollback.md). 점수가 0.99 이상으로 포화되는 현상이 관찰돼 PyTorch로 되돌렸고, 원인은 확정하지 못했으며 비교 결과 기록도 없습니다.
 
-## 프로젝트와 기술의 관계
+### <samp>~/graph</samp> <sub>프로젝트와 기술의 관계</sub>
 
 <p align="center">
 <picture>
@@ -67,7 +78,7 @@ approach  측정으로 검증, 한계도 기록
 
 </details>
 
-## 어떻게 일하나
+### <samp>~/how</samp> <sub>어떻게 일하나</sub>
 
 - **미채택도 기록합니다.** CreditPulse의 [평가 리포트](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md)에는 제목에 미채택이 표기된 절이 22개(순수 미채택 19개, 일부 채택·보류 3개) 있습니다. 측정 전에 기준을 먼저 등록했고, 결과가 기준에 못 미치면 효과가 있어도 되돌렸습니다.
 - **한계를 먼저 적습니다.** 표의 수치마다 표본 수, 조건, 사람 평가 여부를 함께 적었습니다.
@@ -117,8 +128,13 @@ Windows에서 예매 시작 시각을 KST 기준으로 관리하는 Python 데�
 
 </details>
 
-## 기술
+### <samp>~/stack</samp>
 
-Python · FastAPI · LangGraph · RAG(하이브리드 검색·리랭크) · 평가(자체 평가셋, RAGAS) · Langfuse · Docker · PostgreSQL(pgvector)
+`Python` `FastAPI` `LangGraph` `RAG(하이브리드 검색·리랭크)` `평가(자체 평가셋)` `Langfuse` `pytest` `GitHub Actions` `Docker` `PostgreSQL(pgvector)`
 
-<sub>마지막 갱신: 2026-11-19</sub>
+### <samp>~/contact</samp>
+
+- 이메일: [chvodhkd8525@gmail.com](mailto:chvodhkd8525@gmail.com)
+- 포트폴리오: <https://ai-agent-portfolio-theta.vercel.app/>
+
+<p align="center"><sub>마지막 갱신: 2026-11-19</sub></p>
