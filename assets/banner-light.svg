@@ -1,35 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180" role="img" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
 <title>서정현 | AI Agent Developer — GitHub 공개 프로필</title>
-<desc>서정현의 GitHub 공개 프로필 배너. RAG, 평가, FastAPI. 오른쪽은 프로젝트와 기술의 관계를 나타낸 장식 그림이다.</desc>
+<desc>서정현의 GitHub 공개 프로필 배너. RAG, 평가, FastAPI.</desc>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEEDFE"/><stop offset="1" stop-color="#E1F5EE"/></linearGradient>
 </defs>
-<rect width="1200" height="260" rx="18" fill="url(#bg)"/>
-<text x="64" y="92" fill="#26215C" font-size="46" font-weight="700">서정현</text>
-<text x="64" y="140" fill="#3C3489" font-size="26" font-weight="600">AI Agent Developer</text>
-<text x="64" y="178" fill="#5F5E5A" font-size="19">RAG · 평가 · FastAPI</text>
-<text x="64" y="222" fill="#5F5E5A" font-size="15" opacity="0.85">GitHub public profile · github.com/SJeongHyeon</text>
-<g fill="none" stroke-width="2" stroke-linecap="round">
-<path d="M756,130 C800,130 840,70 886,70" stroke="#888780" opacity="0.5"/>
-<path d="M756,130 C800,130 840,130 886,130" stroke="#888780" opacity="0.5"/>
-<path d="M756,130 C800,130 840,190 886,190" stroke="#888780" opacity="0.5"/>
-<path d="M914,70 C990,70 990,44 1071,44" stroke="#7F77DD" opacity="0.85"/>
-<path d="M914,70 C990,70 990,87 1071,87" stroke="#7F77DD" opacity="0.85"/>
-<path d="M914,70 C990,70 990,130 1071,130" stroke="#7F77DD" opacity="0.85"/>
-<path d="M914,70 C990,70 990,173 1071,173" stroke="#7F77DD" opacity="0.85"/>
-<path d="M914,130 C990,130 990,130 1071,130" stroke="#D85A30" opacity="0.85"/>
-<path d="M914,130 C990,130 990,173 1071,173" stroke="#D85A30" opacity="0.85"/>
-<path d="M914,130 C990,130 990,216 1071,216" stroke="#D85A30" opacity="0.85"/>
-<path d="M914,190 C990,190 990,173 1071,173" stroke="#1D9E75" opacity="0.85"/>
-<path d="M914,190 C990,190 990,216 1071,216" stroke="#1D9E75" opacity="0.85"/>
-</g>
-<circle cx="740" cy="130" r="16" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.5"/>
-<circle cx="900" cy="70" r="14" fill="#7F77DD"/>
-<circle cx="900" cy="130" r="14" fill="#D85A30"/>
-<circle cx="900" cy="190" r="14" fill="#1D9E75"/>
-<circle cx="1080" cy="44" r="9" fill="#B4B2A9"/>
-<circle cx="1080" cy="87" r="9" fill="#B4B2A9"/>
-<circle cx="1080" cy="130" r="9" fill="#EF9F27"/>
-<circle cx="1080" cy="173" r="9" fill="#EF9F27"/>
-<circle cx="1080" cy="216" r="9" fill="#EF9F27"/>
+<rect width="800" height="180" rx="16" fill="url(#bg)"/>
+<text x="40" y="70" fill="#26215C" font-size="48" font-weight="700">서정현</text>
+<text x="40" y="112" fill="#3C3489" font-size="28" font-weight="600">AI Agent Developer</text>
+<text x="40" y="150" fill="#444441" font-size="24">GitHub 공개 프로필 · RAG · 평가 · FastAPI</text>
 </svg>

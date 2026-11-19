@@ -3,90 +3,75 @@
   <img alt="서정현 | AI Agent Developer — GitHub 공개 프로필 배너" src="assets/banner-light.svg" width="100%">
 </picture>
 
-> **이 문서는 서정현의 GitHub 공개 프로필입니다**(`github.com/SJeongHyeon`). 아래 프로젝트 저장소는 모두 공개이며 프로필 상단에 핀으로도 고정해 두었습니다.
-
 <p align="center">
-  <a href="https://ai-agent-portfolio-theta.vercel.app/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit-7F77DD?style=flat-square"></a>
-  <a href="https://github.com/SJeongHyeon/credit-pulse"><img alt="CreditPulse" src="https://img.shields.io/badge/CreditPulse-RAG%20%C2%B7%20LangGraph-7F77DD?style=flat-square"></a>
-  <a href="https://github.com/SJeongHyeon/malhaebom-mk2"><img alt="Malhaebom Mk.2" src="https://img.shields.io/badge/Malhaebom%20Mk.2-Eval%20%C2%B7%20CI-D85A30?style=flat-square"></a>
-  <a href="https://github.com/SJeongHyeon/voiceguard"><img alt="VoiceGuard" src="https://img.shields.io/badge/VoiceGuard-FastAPI%20%C2%B7%20STT-1D9E75?style=flat-square"></a>
-</p>
-
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
-  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
-  <img alt="pytest" src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white">
-  <img alt="Langfuse" src="https://img.shields.io/badge/Langfuse-111111?style=flat-square">
+  <a href="https://ai-agent-portfolio-theta.vercel.app/"><img alt="포트폴리오 사이트 열기" src="assets/chip-portfolio.svg" height="28"></a>
 </p>
 
 ```text
 ~/about
-role      AI Agent Developer
+profile   GitHub 공개 프로필
+repos     저장소 3개 공개 · 핀 고정
 focus     RAG · 평가 · FastAPI
-approach  측정으로 검증하고, 미채택 실험과 한계도 기록한다
-status    수료 과정 팀 프로젝트 3개 완료 · 코드와 시연 영상 공개
+approach  측정으로 검증, 한계도 기록
 ```
-
-<table align="center">
-  <tr>
-    <td align="center"><h3>23/25</h3><sub>정답 근거 인용<br>CreditPulse · 관련 25문항</sub></td>
-    <td align="center"><h3>90/90</h3><sub>출력 계약 통과<br>말해봄 · 합성 30건 × 3회<br>(종합 자동 통과는 57/90)</sub></td>
-    <td align="center"><h3>98.98%</h3><sub>보이스피싱 Recall<br>보이스가드 · 499개 샘플<br>(오탐률은 48.84%)</sub></td>
-    <td align="center"><h3>22개 절</h3><sub>미채택으로 기록한 실험<br>CreditPulse 평가 리포트</sub></td>
-  </tr>
-</table>
-
-<p align="center"><sub>수치마다 조건과 한계를 함께 적었습니다. 자세한 표본·근거는 아래 표와 각 저장소의 결과표에 있습니다.</sub></p>
 
 ## 대표 프로젝트
 
-세 프로젝트 모두 수료 과정의 팀 프로젝트이며 개발은 끝났습니다. 수치는 조건과 한계를 함께 적었고, 각 저장소의 결과표에서 근거 파일을 확인할 수 있습니다.
+세 프로젝트 모두 수료 과정의 팀 프로젝트이며 개발은 끝났습니다. 수치는 좋은 값과 반대 값, 표본과 조건을 함께 적었고 각 저장소의 결과표에서 근거 파일을 확인할 수 있습니다.
 
-| 프로젝트 | 한 줄 | 결과 | 내 역할 · 상태 |
+| 프로젝트 | 결과 | 한 줄 | 내 역할 · 상태 |
 | --- | --- | --- | --- |
-| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse) | 기업여신 심사역이 DART 사업보고서에서 체크리스트 항목의 근거를 찾아 판정 초안을 받고, 승인한 것만 메모로 저장하는 RAG·LangGraph 에이전트 | **정답 근거 인용 23/25**<br><sub>동결 평가셋 v2 관련 25문항 · 1회 실행(2026-11-12) · 오답 근거 0/25 · 올바른 거절 24/25 · 사람 대조 없는 RAGAS 점수는 참고로만 · [근거](https://github.com/SJeongHyeon/credit-pulse#측정-결과)</sub> | LangGraph 에이전트와 평가 · 커밋 203건, PR 62건<br><sub>코드·시연 영상 공개</sub> |
-| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | 한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 답변 근거를 바탕으로 코칭하는 서비스 | **종합 자동 통과 57/90**<br><sub>합성 입력 30건 × 3회(2026-10-06) · 출력 계약 90/90 · 사람 평가와 실사용자 평가는 하지 않음 · [근거](https://github.com/SJeongHyeon/malhaebom-mk2#측정-결과)</sub> | 모델 평가·검증 도구, 관측·CI, 사용자 화면 · 커밋 89건, PR 39건<br><sub>코드 공개 · [팀 소개 사이트](https://nanocode00.github.io/malhaebom-showcase/)</sub> |
-| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 대화 구간을 알려 주는 서비스 | **보이스피싱 Recall 98.98%**<br><sub>499개 샘플 · 오탐률(FPR)은 48.84%로 높음 · 로컬 평가 산출물 기준이며 독립 시험셋 확인 전 · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과)</sub> | 백엔드(FastAPI), 비동기 작업·요청 제어, 모델 연동 · 커밋 47건, PR 27건<br><sub>코드·시연 영상 공개, 백엔드 배포는 현재 내려감</sub> |
+| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse) | **정답 근거 인용 23/25 · 오답 근거 0/25**<br><sub>동결 평가셋 v2의 관련 25문항, 1회 실행(2026-11-12 UTC) · 같은 평가셋으로 실험을 골랐음 · [근거](https://github.com/SJeongHyeon/credit-pulse#측정-결과)</sub> | 기업여신 심사역이 DART 사업보고서에서 체크리스트 항목의 근거를 찾아 판정 초안을 받고, 승인한 것만 메모로 저장하는 RAG·LangGraph 에이전트 | LangGraph 에이전트와 평가<br><sub>커밋 203건, PR 65건(병합 62) · 코드·시연 영상 공개 · CI 통과(Actions, 2026-11-19)</sub> |
+| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | **종합 자동 통과 57/90 · 형식(출력 계약) 90/90**<br><sub>합성 입력 30건 × 3회(2026-10-06) · 최신 운영 구성의 사람 평가는 없음 · [근거](https://github.com/SJeongHyeon/malhaebom-mk2#측정-결과)</sub> | 한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 답변 근거를 바탕으로 코칭하는 서비스 | 모델 평가·검증 도구, 관측·CI, 사용자 화면<br><sub>커밋 89건, PR 39건 · 코드 공개(영상 없음) · CI 통과(Actions, 2026-11-19) · [팀 소개 사이트](https://nanocode00.github.io/malhaebom-showcase/)</sub> |
+| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | **팀 모델 평가 Recall 98.98% · 오탐률(FPR) 48.84%**<br><sub>499개 샘플, 독립 시험셋 확인 전 · 저장소 시험 146 통과·4 실패(팀 코드 포함, 사본 재실행) · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과)</sub> | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 대화 구간을 알려 주는 서비스 | 백엔드(FastAPI), 비동기 작업·요청 제어, 모델 연동<br><sub>커밋 47건, PR 28건(병합 27) · 코드·시연 영상 공개 · 백엔드 배포는 현재 내려감 · CI 없음</sub> |
 
 커밋·PR 수는 비공개 원본 저장소에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. 팀 성과와 내 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 나눠 적었습니다.
 
 **시연 영상**: [CreditPulse](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/demo/creditpulse_demo.mp4) · [보이스가드 원본 녹화(직접 녹화, 소리 포함, Google Drive)](https://drive.google.com/file/d/1u3DY856VDEZkHz8jf1ajQzmT7vNgpgHn/view?usp=sharing) · [보이스가드(서비스 화면만)](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/demo/voiceguard_demo.mp4)
 
+## 사례 연구
+
+결과가 좋지 않거나 원인을 모르는 경우도 같은 표에 적었습니다. 각 글은 한 쪽입니다.
+
+- **미채택 · CreditPulse**: [목차 어휘 번역](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/case-studies/term-bridge-rejected.md). 첫 검색 Hit@10 20/23 → 22/23이지만 검색 p50 1.73초 → 4.00초로 사전 한도(+1.5초)를 넘어 미채택했습니다.
+- **승격 보류 · 말해봄**: [Prompt v5 후보](https://github.com/SJeongHyeon/malhaebom-mk2/blob/main/docs/case-studies/prompt-v4-v5-candidate.md). 비용은 약 13.3% 줄었지만 종합 자동 통과가 22/30 → 20/30으로 줄어 승격을 보류했습니다.
+- **임시 롤백 · 보이스가드**: [ONNX INT8 분류기](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/case-studies/onnx-int8-rollback.md). 점수가 0.99 이상으로 포화되는 현상이 관찰돼 PyTorch로 되돌렸고, 원인은 확정하지 못했으며 비교 결과 기록도 없습니다.
+
 ## 프로젝트와 기술의 관계
 
+<p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/relation-graph-dark.svg">
-  <img alt="서정현이 CreditPulse, 말해봄, 보이스가드에서 쓴 기술의 관계도. 평가·측정, pytest·CI, FastAPI는 세 프로젝트가 함께 쓰고 Langfuse는 두 프로젝트가 씁니다." src="assets/relation-graph-light.svg" width="720">
+  <img alt="서정현이 CreditPulse, 말해봄, 보이스가드에서 쓴 기술의 관계도. 평가·측정, pytest, FastAPI는 세 프로젝트가 함께 쓰고 Langfuse와 CI는 두 프로젝트가 씁니다." src="assets/relation-graph-light.svg" width="420">
 </picture>
+</p>
 
-<sub>선 색은 프로젝트, 노란 기술은 둘 이상의 프로젝트에서 쓴 기술이고 숫자는 사용한 프로젝트 수입니다. 직접 그린 관계도이며([생성 스크립트](assets/make_relation_graph.py)) 실제로 쓴 기술만 넣었습니다.</sub>
+<sub>직접 그린 관계도이며([생성 스크립트](assets/make_relation_graph.py)) 실제로 쓴 기술만 넣었습니다. 실선은 근거를 확인한 관계, 점선은 구현이 아니라 검증 근거만 있는 관계입니다.</sub>
 
 <details>
 <summary><b>이 관계도의 근거</b></summary>
 
 숫자는 비공개 원본의 PR 번호이며, 각 저장소의 `CONTRIBUTIONS.md`에서 내용을 확인할 수 있습니다.
 
-| 기술 | CreditPulse | 말해봄 Mk.2 | 보이스가드 |
+| 기술 | CreditPulse | 말해봄 | 보이스가드 |
 | --- | --- | --- | --- |
-| FastAPI | 심사 API·로그인(`backend/`) | Agent 응답 계약 검증(#113·#116) | API 전반(#10–#21) |
-| 평가·측정 | 평가셋·사전 등록·`EVAL_REPORT.md` | 모델 평가 실행기(#14·#19·#43·#45) | 분류 평가 도구(#56) |
-| pytest·CI | CI 워크플로, 키 없이 1626 통과 | Product CI에 pytest 추가(#145) | 파이프라인 E2E 시험(#36) |
-| Langfuse | 트레이스·관측(`backend/services/tracing.py`) | 호출 지연 계측(#107·#108) | 해당 없음 |
-| LangGraph | Supervisor·승인 interrupt(`backend/graph/`) | 해당 없음 | 해당 없음 |
-| RAG 검색·리랭크 | 하이브리드 검색·리랭크(`EVAL_REPORT.md` 3장) | 해당 없음 | 해당 없음 |
-| MCP·n8n | 해당 없음 | MCP 장애 계약 검증·n8n 모의 워크플로(#142·#44) | 해당 없음 |
-| Whisper·KoELECTRA | 해당 없음 | 해당 없음 | 모델 연동(#33·#34·#37) |
+| FastAPI | 심사 API·로그인 | 응답 계약 검증 #113·#116(점선) | #11·#12·#13·#15·#16·#17·#18·#19·#27 |
+| 평가·측정 | 평가셋·사전 등록·`EVAL_REPORT.md` | 평가 실행기 #14·#19·#43·#45 | 분류 평가 도구 #56 |
+| pytest | 키 없이 1626 통과(사본 재실행) | Product CI에 pytest 추가 #145 | E2E #36, 요청 제어 #19, 평가 도구 #56 |
+| CI | Actions 통과(2026-11-19, `596a670`) | Actions 통과(2026-11-19, `e00b408`) | 없음 |
+| Langfuse | `backend/services/tracing.py` | 지연 계측 #107·#108 | — |
+| LangGraph | `backend/graph/` | — | — |
+| RAG 검색·리랭크 | `EVAL_REPORT.md` 3장 | — | — |
+| MCP·n8n | — | #142·#44 | — |
+| Whisper·KoELECTRA | — | — | #33·#34·#37 |
 
 </details>
 
 ## 어떻게 일하나
 
-- **미채택도 기록합니다.** CreditPulse의 [평가 리포트](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md)에는 미채택으로 표시한 실험이 22개 절 있고, 측정 전에 기준을 먼저 등록한 뒤 결과가 기준에 못 미치면 되돌렸습니다.
-- **한계를 먼저 적습니다.** 위 표의 수치마다 표본 수, 조건, 사람 평가 여부를 함께 적었습니다.
-- **재현할 수 있게 둡니다.** 세 저장소 모두 API 키 없이 돌리는 시험 결과와 명령을 README에 남겼습니다(CreditPulse 1626 통과, 말해봄 백엔드 846·프론트 279 통과, 보이스가드 146 통과·4 실패 원인 기록).
+- **미채택도 기록합니다.** CreditPulse의 [평가 리포트](https://github.com/SJeongHyeon/credit-pulse/blob/main/EVAL_REPORT.md)에는 제목에 미채택이 표기된 절이 22개(순수 미채택 19개, 일부 채택·보류 3개) 있습니다. 측정 전에 기준을 먼저 등록했고, 결과가 기준에 못 미치면 효과가 있어도 되돌렸습니다.
+- **한계를 먼저 적습니다.** 표의 수치마다 표본 수, 조건, 사람 평가 여부를 함께 적었습니다.
+- **재현할 수 있게 둡니다.** 세 저장소 모두 API 키 없이 돌리는 시험 결과와 명령을 README에 남겼습니다. CreditPulse와 말해봄은 GitHub Actions에서도 통과했고(2026-11-19 수동 실행), 보이스가드는 CI가 없어 시험 4건 실패의 원인을 기록했습니다.
 
 <details>
 <summary><b>프로젝트별 상세 기여</b></summary>
@@ -116,7 +101,7 @@ status    수료 과정 팀 프로젝트 3개 완료 · 코드와 시연 영상 
 - **백엔드 API:** FastAPI API 계약, 파일 업로드 검증, 공통 오류 응답과 요청 추적, 모델 준비 상태 확인을 구현했습니다.
 - **비동기 작업·보호 장치:** 작업 상태·결과 조회와 실제 실행 작업 취소, 임시 음성 자료 정리, 중복 작업 잠금·요청 제한·IP 해시 처리를 연결했습니다.
 - **음성·분류 파이프라인:** Whisper/LoRA 및 KoELECTRA 실행 연동, 전사문 정규화, 음성·텍스트 청킹, 위험 점수·상위 구간 집계와 단계별 진행률을 구현했습니다. 청크 전사·분류를 큐로 연결하는 스트리밍 파이프라인도 추가했습니다.
-- **배포·문제 해결:** Docker/Railway 실행 설정, 음성 바이트 디코딩 수정, 분석 시간 제한, ONNX INT8 도입과 점수 포화 문제에 대응한 PyTorch 롤백을 수행했습니다.
+- **실행 설정·문제 해결:** Docker 실행 설정, 음성 바이트 디코딩 수정, 분석 시간 제한을 맡았고, ONNX INT8 분류기를 도입했다가 점수 포화 현상이 관찰되어 PyTorch로 되돌렸습니다(원인은 확정하지 못함).
 - **검증 도구:** 업로드부터 결과·실패·취소·정리까지의 E2E 테스트와 분류 평가 지표·혼동행렬을 산출하는 도구를 추가했습니다.
 - 모델 학습 성과는 팀의 성과이며, 여기서는 제가 담당한 실행 연동·서비스 구현·검증 기여를 소개합니다.
 
@@ -136,4 +121,4 @@ Windows에서 예매 시작 시각을 KST 기준으로 관리하는 Python 데�
 
 Python · FastAPI · LangGraph · RAG(하이브리드 검색·리랭크) · 평가(자체 평가셋, RAGAS) · Langfuse · Docker · PostgreSQL(pgvector)
 
-<sub>이 README는 GitHub 공개 프로필 저장소(`SJeongHyeon/SJeongHyeon`)의 문서입니다. 마지막 갱신: 2026-11-19</sub>
+<sub>마지막 갱신: 2026-11-19</sub>

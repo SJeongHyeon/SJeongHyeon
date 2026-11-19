@@ -1,57 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="500" viewBox="0 0 680 500" role="img" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="620" viewBox="0 0 420 620" role="img" font-family="'Pretendard','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
 <title>서정현의 프로젝트와 기술 관계도</title>
-<desc>서정현에서 CreditPulse, 말해봄 Mk.2, 보이스가드로 선이 이어지고, 각 프로젝트에서 사용한 기술로 프로젝트 색의 곡선이 이어진다. 평가·측정, pytest·CI, FastAPI는 세 프로젝트가 함께 쓰고 Langfuse는 두 프로젝트가 쓴다.</desc>
-<g fill="none" stroke-width="1.8" stroke-linecap="round">
-<path d="M100,260 C125,260 125,150 150,150" stroke="#888780" opacity="0.5"/>
-<path d="M100,260 C125,260 125,260 150,260" stroke="#888780" opacity="0.5"/>
-<path d="M100,260 C125,260 125,370 150,370" stroke="#888780" opacity="0.5"/>
-<path d="M278,150 C372,150 372,44 466,44" stroke="#7F77DD" opacity="0.9"/>
-<path d="M278,150 C372,150 372,100 466,100" stroke="#7F77DD" opacity="0.9"/>
-<path d="M278,150 C372,150 372,156 466,156" stroke="#7F77DD" opacity="0.9"/>
-<path d="M278,260 C372,260 372,160 466,160" stroke="#D85A30" opacity="0.9"/>
-<path d="M278,150 C372,150 372,212 466,212" stroke="#7F77DD" opacity="0.9"/>
-<path d="M278,260 C372,260 372,216 466,216" stroke="#D85A30" opacity="0.9"/>
-<path d="M278,370 C372,370 372,220 466,220" stroke="#1D9E75" opacity="0.9"/>
-<path d="M278,150 C372,150 372,268 466,268" stroke="#7F77DD" opacity="0.9"/>
-<path d="M278,260 C372,260 372,272 466,272" stroke="#D85A30" opacity="0.9"/>
-<path d="M278,370 C372,370 372,276 466,276" stroke="#1D9E75" opacity="0.9"/>
-<path d="M278,150 C372,150 372,324 466,324" stroke="#7F77DD" opacity="0.9"/>
-<path d="M278,260 C372,260 372,328 466,328" stroke="#D85A30" opacity="0.9"/>
-<path d="M278,370 C372,370 372,332 466,332" stroke="#1D9E75" opacity="0.9"/>
-<path d="M278,260 C372,260 372,384 466,384" stroke="#D85A30" opacity="0.9"/>
-<path d="M278,370 C372,370 372,444 466,444" stroke="#1D9E75" opacity="0.9"/>
+<desc>CreditPulse, 말해봄 Mk.2, 보이스가드에서 쓴 기술을 프로젝트 색의 곡선으로 이은 관계도. 실선은 근거가 확인된 관계이고 점선은 검증이거나 공개 사본에서 실행한 기록이 없는 관계다. 평가·측정, pytest, FastAPI는 세 프로젝트가 함께 쓴다.</desc>
+<g fill="none" stroke-width="2" stroke-linecap="round">
+<path d="M126,150 C188,150 188,43 250,43" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,150 C188,150 188,105 250,105" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,150 C188,150 188,167 250,167" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,150 C188,150 188,229 250,229" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,150 C188,150 188,291 250,291" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,150 C188,150 188,353 250,353" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,150 C188,150 188,415 250,415" stroke="#7F77DD" opacity="0.9"/>
+<path d="M126,310 C188,310 188,172 250,172" stroke="#D85A30" opacity="0.9"/>
+<path d="M126,310 C188,310 188,234 250,234" stroke="#D85A30" opacity="0.9"/>
+<path d="M126,310 C188,310 188,296 250,296" stroke="#D85A30" opacity="0.9"/>
+<path d="M126,310 C188,310 188,358 250,358" stroke="#D85A30" opacity="0.9"/>
+<path d="M126,310 C188,310 188,420 250,420" stroke="#D85A30" opacity="0.9" stroke-dasharray="7 5"/>
+<path d="M126,310 C188,310 188,482 250,482" stroke="#D85A30" opacity="0.9"/>
+<path d="M126,470 C188,470 188,239 250,239" stroke="#1D9E75" opacity="0.9"/>
+<path d="M126,470 C188,470 188,301 250,301" stroke="#1D9E75" opacity="0.9"/>
+<path d="M126,470 C188,470 188,425 250,425" stroke="#1D9E75" opacity="0.9"/>
+<path d="M126,470 C188,470 188,549 250,549" stroke="#1D9E75" opacity="0.9"/>
 </g>
-<circle cx="64" cy="260" r="36" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.8"/>
-<text x="64" y="260" fill="#444441" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">서정현</text>
-<rect x="150" y="125" width="128" height="50" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
-<text x="214" y="150" fill="#3C3489" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">CreditPulse</text>
-<rect x="150" y="235" width="128" height="50" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
-<text x="214" y="260" fill="#712B13" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">말해봄 Mk.2</text>
-<rect x="150" y="345" width="128" height="50" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
-<text x="214" y="370" fill="#085041" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">보이스가드</text>
-<rect x="466" y="31" width="174" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.8"/>
-<text x="553" y="48" fill="#444441" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="central">LangGraph</text>
-<rect x="466" y="87" width="174" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.8"/>
-<text x="553" y="104" fill="#444441" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="central">RAG 검색·리랭크</text>
-<rect x="466" y="143" width="174" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.8"/>
-<text x="540" y="160" fill="#633806" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">Langfuse</text>
-<circle cx="618" cy="160" r="10" fill="#FAC775" stroke="#854F0B" stroke-width="0.8"/>
-<text x="618" y="160" fill="#412402" font-size="12" font-weight="500" text-anchor="middle" dominant-baseline="central">2</text>
-<rect x="466" y="199" width="174" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.8"/>
-<text x="540" y="216" fill="#633806" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">평가·측정</text>
-<circle cx="618" cy="216" r="10" fill="#FAC775" stroke="#854F0B" stroke-width="0.8"/>
-<text x="618" y="216" fill="#412402" font-size="12" font-weight="500" text-anchor="middle" dominant-baseline="central">3</text>
-<rect x="466" y="255" width="174" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.8"/>
-<text x="540" y="272" fill="#633806" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">pytest·CI</text>
-<circle cx="618" cy="272" r="10" fill="#FAC775" stroke="#854F0B" stroke-width="0.8"/>
-<text x="618" y="272" fill="#412402" font-size="12" font-weight="500" text-anchor="middle" dominant-baseline="central">3</text>
-<rect x="466" y="311" width="174" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.8"/>
-<text x="540" y="328" fill="#633806" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="central">FastAPI</text>
-<circle cx="618" cy="328" r="10" fill="#FAC775" stroke="#854F0B" stroke-width="0.8"/>
-<text x="618" y="328" fill="#412402" font-size="12" font-weight="500" text-anchor="middle" dominant-baseline="central">3</text>
-<rect x="466" y="367" width="174" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.8"/>
-<text x="553" y="384" fill="#444441" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="central">MCP·n8n</text>
-<rect x="466" y="423" width="174" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.8"/>
-<text x="553" y="440" fill="#444441" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="central">Whisper·KoELECTRA</text>
-<text x="40" y="486" fill="#5F5E5A" font-size="12" dominant-baseline="central">선 색 = 프로젝트 · 노란 기술 = 둘 이상 프로젝트에서 사용 · 숫자 = 사용한 프로젝트 수</text>
+<rect x="14" y="123" width="112" height="54" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="70" y="150" fill="#3C3489" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">CreditPulse</text>
+<rect x="14" y="283" width="112" height="54" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+<text x="70" y="310" fill="#712B13" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">말해봄 Mk.2</text>
+<rect x="14" y="443" width="112" height="54" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+<text x="70" y="470" fill="#085041" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">보이스가드</text>
+<rect x="250" y="31" width="156" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+<text x="328" y="48" fill="#444441" font-size="16" font-weight="400" text-anchor="middle" dominant-baseline="central">LangGraph</text>
+<rect x="250" y="93" width="156" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+<text x="328" y="110" fill="#444441" font-size="16" font-weight="400" text-anchor="middle" dominant-baseline="central">RAG 검색·리랭크</text>
+<rect x="250" y="155" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="312" y="172" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">Langfuse</text>
+<circle cx="388" cy="172" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
+<text x="388" y="172" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">2</text>
+<rect x="250" y="217" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="312" y="234" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">평가·측정</text>
+<circle cx="388" cy="234" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
+<text x="388" y="234" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">3</text>
+<rect x="250" y="279" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="312" y="296" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">pytest</text>
+<circle cx="388" cy="296" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
+<text x="388" y="296" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">3</text>
+<rect x="250" y="341" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="312" y="358" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">CI(GitHub Actions)</text>
+<circle cx="388" cy="358" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
+<text x="388" y="358" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">2</text>
+<rect x="250" y="403" width="156" height="34" rx="17" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="312" y="420" fill="#633806" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="central">FastAPI</text>
+<circle cx="388" cy="420" r="11" fill="#FAC775" stroke="#854F0B" stroke-width="1"/>
+<text x="388" y="420" fill="#412402" font-size="14" font-weight="600" text-anchor="middle" dominant-baseline="central">3</text>
+<rect x="250" y="465" width="156" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+<text x="328" y="482" fill="#444441" font-size="16" font-weight="400" text-anchor="middle" dominant-baseline="central">MCP·n8n</text>
+<rect x="250" y="527" width="156" height="34" rx="17" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+<text x="328" y="544" fill="#444441" font-size="16" font-weight="400" text-anchor="middle" dominant-baseline="central">Whisper·KoELECTRA</text>
+<text x="14" y="588" fill="#444441" font-size="14" dominant-baseline="central">선 색 = 프로젝트 · 노란 칸 = 둘 이상 프로젝트(숫자)</text>
+<text x="14" y="610" fill="#444441" font-size="14" dominant-baseline="central">실선 = 근거 확인 · 점선 = 검증·미실행</text>
 </svg>
