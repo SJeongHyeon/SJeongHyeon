@@ -1,8 +1,45 @@
-# 서정현 | AI Agent Developer
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img alt="서정현 | AI Agent Developer — GitHub 공개 프로필 배너" src="assets/banner-light.svg" width="100%">
+</picture>
 
-**RAG · 평가 · FastAPI** — AI 에이전트의 출력을 측정으로 검증하고, 점수가 오르지 않은 실험과 한계도 기록합니다.
+> **이 문서는 서정현의 GitHub 공개 프로필입니다**(`github.com/SJeongHyeon`). 아래 프로젝트 저장소는 모두 공개이며 프로필 상단에 핀으로도 고정해 두었습니다.
 
-[포트폴리오 보기](https://ai-agent-portfolio-theta.vercel.app/)
+<p align="center">
+  <a href="https://ai-agent-portfolio-theta.vercel.app/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit-7F77DD?style=flat-square"></a>
+  <a href="https://github.com/SJeongHyeon/credit-pulse"><img alt="CreditPulse" src="https://img.shields.io/badge/CreditPulse-RAG%20%C2%B7%20LangGraph-7F77DD?style=flat-square"></a>
+  <a href="https://github.com/SJeongHyeon/malhaebom-mk2"><img alt="Malhaebom Mk.2" src="https://img.shields.io/badge/Malhaebom%20Mk.2-Eval%20%C2%B7%20CI-D85A30?style=flat-square"></a>
+  <a href="https://github.com/SJeongHyeon/voiceguard"><img alt="VoiceGuard" src="https://img.shields.io/badge/VoiceGuard-FastAPI%20%C2%B7%20STT-1D9E75?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
+  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+  <img alt="pytest" src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white">
+  <img alt="Langfuse" src="https://img.shields.io/badge/Langfuse-111111?style=flat-square">
+</p>
+
+```text
+~/about
+role      AI Agent Developer
+focus     RAG · 평가 · FastAPI
+approach  측정으로 검증하고, 미채택 실험과 한계도 기록한다
+status    수료 과정 팀 프로젝트 3개 완료 · 코드와 시연 영상 공개
+```
+
+<table align="center">
+  <tr>
+    <td align="center"><h3>23/25</h3><sub>정답 근거 인용<br>CreditPulse · 관련 25문항</sub></td>
+    <td align="center"><h3>90/90</h3><sub>출력 계약 통과<br>말해봄 · 합성 30건 × 3회<br>(종합 자동 통과는 57/90)</sub></td>
+    <td align="center"><h3>98.98%</h3><sub>보이스피싱 Recall<br>보이스가드 · 499개 샘플<br>(오탐률은 48.84%)</sub></td>
+    <td align="center"><h3>22개 절</h3><sub>미채택으로 기록한 실험<br>CreditPulse 평가 리포트</sub></td>
+  </tr>
+</table>
+
+<p align="center"><sub>수치마다 조건과 한계를 함께 적었습니다. 자세한 표본·근거는 아래 표와 각 저장소의 결과표에 있습니다.</sub></p>
 
 ## 대표 프로젝트
 
@@ -15,6 +52,8 @@
 | [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 대화 구간을 알려 주는 서비스 | **보이스피싱 Recall 98.98%**<br><sub>499개 샘플 · 오탐률(FPR)은 48.84%로 높음 · 로컬 평가 산출물 기준이며 독립 시험셋 확인 전 · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과)</sub> | 백엔드(FastAPI), 비동기 작업·요청 제어, 모델 연동 · 커밋 47건, PR 27건<br><sub>코드·시연 영상 공개, 백엔드 배포는 현재 내려감</sub> |
 
 커밋·PR 수는 비공개 원본 저장소에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. 팀 성과와 내 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 나눠 적었습니다.
+
+**시연 영상**: [CreditPulse](https://github.com/SJeongHyeon/credit-pulse/blob/main/docs/demo/creditpulse_demo.mp4) · [보이스가드 원본 녹화(직접 녹화, 소리 포함, Google Drive)](https://drive.google.com/file/d/1u3DY856VDEZkHz8jf1ajQzmT7vNgpgHn/view?usp=sharing) · [보이스가드(서비스 화면만)](https://github.com/SJeongHyeon/voiceguard/blob/main/docs/demo/voiceguard_demo.mp4)
 
 ## 프로젝트와 기술의 관계
 
@@ -97,4 +136,4 @@ Windows에서 예매 시작 시각을 KST 기준으로 관리하는 Python 데�
 
 Python · FastAPI · LangGraph · RAG(하이브리드 검색·리랭크) · 평가(자체 평가셋, RAGAS) · Langfuse · Docker · PostgreSQL(pgvector)
 
-<sub>마지막 갱신: 2026-11-19</sub>
+<sub>이 README는 GitHub 공개 프로필 저장소(`SJeongHyeon/SJeongHyeon`)의 문서입니다. 마지막 갱신: 2026-11-19</sub>
