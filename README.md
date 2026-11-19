@@ -19,11 +19,11 @@ approach  측정으로 검증, 한계도 기록
 
 세 프로젝트 모두 수료 과정의 팀 프로젝트이며 개발은 끝났습니다. 수치는 좋은 값과 반대 값, 표본과 조건을 함께 적었고 각 저장소의 결과표에서 근거 파일을 확인할 수 있습니다.
 
-| 프로젝트 | 결과 | 한 줄 | 내 역할 · 상태 |
-| --- | --- | --- | --- |
-| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse) | **정답 근거 인용 23/25 · 오답 근거 0/25**<br><sub>동결 평가셋 v2의 관련 25문항, 1회 실행(2026-11-12 UTC) · 같은 평가셋으로 실험을 골랐음 · [근거](https://github.com/SJeongHyeon/credit-pulse#측정-결과)</sub> | 기업여신 심사역이 DART 사업보고서에서 체크리스트 항목의 근거를 찾아 판정 초안을 받고, 승인한 것만 메모로 저장하는 RAG·LangGraph 에이전트 | LangGraph 에이전트와 평가<br><sub>커밋 203건, PR 65건(병합 62) · 코드·시연 영상 공개 · CI 통과(Actions, 2026-11-19)</sub> |
-| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2) | **종합 자동 통과 57/90 · 형식(출력 계약) 90/90**<br><sub>합성 입력 30건 × 3회(2026-10-06) · 최신 운영 구성의 사람 평가는 없음 · [근거](https://github.com/SJeongHyeon/malhaebom-mk2#측정-결과)</sub> | 한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 답변 근거를 바탕으로 코칭하는 서비스 | 모델 평가·검증 도구, 관측·CI, 사용자 화면<br><sub>커밋 89건, PR 39건 · 코드 공개(영상 없음) · CI 통과(Actions, 2026-11-19) · [팀 소개 사이트](https://nanocode00.github.io/malhaebom-showcase/)</sub> |
-| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard) | **팀 모델 평가 Recall 98.98% · 오탐률(FPR) 48.84%**<br><sub>499개 샘플, 독립 시험셋 확인 전 · 저장소 시험 146 통과·4 실패(팀 코드 포함, 사본 재실행) · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과)</sub> | 통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 대화 구간을 알려 주는 서비스 | 백엔드(FastAPI), 비동기 작업·요청 제어, 모델 연동<br><sub>커밋 47건, PR 28건(병합 27) · 코드·시연 영상 공개 · 백엔드 배포는 현재 내려감 · CI 없음</sub> |
+| 프로젝트 | 결과 | 내 역할 · 상태 |
+| --- | --- | --- |
+| [**CreditPulse**](https://github.com/SJeongHyeon/credit-pulse)<br><sub>기업여신 심사역이 DART 사업보고서에서 체크리스트 항목의 근거를 찾아 판정 초안을 받고, 승인한 것만 메모로 저장하는 RAG·LangGraph 에이전트</sub> | **정답 근거 인용 23/25 · 오답 근거 0/25**<br><sub>동결 평가셋 v2의 관련 25문항, 1회 실행(2026-11-12 UTC) · 같은 평가셋으로 실험을 골랐음 · [근거](https://github.com/SJeongHyeon/credit-pulse#측정-결과)</sub> | LangGraph 에이전트와 평가<br><sub>커밋 203건, PR 65건(병합 62) · 코드·시연 영상 공개 · CI 통과(Actions, 2026-11-19)</sub> |
+| [**말해봄 Mk.2**](https://github.com/SJeongHyeon/malhaebom-mk2)<br><sub>한국어 면접 답변을 녹음하면 말하기 방식을 분석하고 답변 근거를 바탕으로 코칭하는 서비스</sub> | **종합 자동 통과 57/90 · 형식(출력 계약) 90/90**<br><sub>합성 입력 30건 × 3회(2026-10-06) · 최신 운영 구성의 사람 평가는 없음 · [근거](https://github.com/SJeongHyeon/malhaebom-mk2#측정-결과)</sub> | 모델 평가·검증 도구, 관측·CI, 사용자 화면<br><sub>커밋 89건, PR 39건 · 코드 공개(영상 없음) · CI 통과(Actions, 2026-11-19) · [팀 소개 사이트](https://nanocode00.github.io/malhaebom-showcase/)</sub> |
+| [**보이스가드**](https://github.com/SJeongHyeon/voiceguard)<br><sub>통화 녹음을 분석해 보이스피싱 의심 여부와 확인할 대화 구간을 알려 주는 서비스</sub> | **팀 모델 평가 Recall 98.98% · 오탐률(FPR) 48.84%**<br><sub>499개 샘플, 독립 시험셋 확인 전 · 저장소 시험 146 통과·4 실패(팀 코드 포함, 사본 재실행) · [근거](https://github.com/SJeongHyeon/voiceguard#실험-결과)</sub> | 백엔드(FastAPI), 비동기 작업·요청 제어, 모델 연동<br><sub>커밋 47건, PR 28건(병합 27) · 코드·시연 영상 공개 · 백엔드 배포는 현재 내려감 · CI 없음</sub> |
 
 커밋·PR 수는 비공개 원본 저장소에서 2026-11-19에 센 값이며 기여의 크기를 뜻하지 않습니다. 팀 성과와 내 담당 범위는 각 저장소의 `CONTRIBUTIONS.md`에 나눠 적었습니다.
 
@@ -54,7 +54,7 @@ approach  측정으로 검증, 한계도 기록
 숫자는 비공개 원본의 PR 번호이며, 각 저장소의 `CONTRIBUTIONS.md`에서 내용을 확인할 수 있습니다.
 
 | 기술 | CreditPulse | 말해봄 | 보이스가드 |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | FastAPI | 심사 API·로그인 | 응답 계약 검증 #113·#116(점선) | #11·#12·#13·#15·#16·#17·#18·#19·#27 |
 | 평가·측정 | 평가셋·사전 등록·`EVAL_REPORT.md` | 평가 실행기 #14·#19·#43·#45 | 분류 평가 도구 #56 |
 | pytest | 키 없이 1626 통과(사본 재실행) | Product CI에 pytest 추가 #145 | E2E #36, 요청 제어 #19, 평가 도구 #56 |
